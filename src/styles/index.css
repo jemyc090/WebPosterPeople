@@ -1,0 +1,9 @@
+@import './fonts.css';
+@import './tailwind.css';
+@import './theme.css';
+
+@layer base {
+  a, button, [role="button"], label[for], select, summary {
+    cursor: pointer;
+  }
+}
