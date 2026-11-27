@@ -2,6 +2,9 @@
 
 import thumbnailVideo from "../../imports/thumbnail-video.png";
 
+import muro1 from "../../imports/muro/muro-1.jpg";
+import muro2 from "../../imports/muro/muro-2.jpg";
+import muro3 from "../../imports/muro/muro-3.jpg";
 import camaPlana1 from "../../imports/cama-plana/cama-plana-1.jpg";
 import camaPlana2 from "../../imports/cama-plana/cama-plana-2.jpg";
 import camaPlana3 from "../../imports/cama-plana/cama-plana-3.jpg";
@@ -564,6 +567,24 @@ const todosLosServicios: Servicio[] = [
     icono: "🏬",
     galeria: [
       // Galería vacía por ahora (pendiente de fotos de stands)
+    ],
+  },
+  {
+    orden: 13,
+    path: "muro",
+    tituloServicio: "Muro",
+    descripcion: "",
+    esEstrella: false,
+    categoriaSlug: "material-pop-y-display",
+    subservicios: [
+    ],
+    imagenHero: muro1,
+    color: "#FA4616",
+    icono: "🧱",
+    galeria: [
+      { type: "image", url: muro1 },
+      { type: "image", url: muro2 },
+      { type: "image", url: muro3 },
     ],
   },
   {

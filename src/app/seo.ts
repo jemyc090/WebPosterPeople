@@ -42,7 +42,7 @@ const CATEGORY_KEYWORDS: Record<string, string[]> = {
     "photo frame", "figuras a contorno", "merchandising", "serigrafía", "sublimación",
   ],
   "material-pop-y-display": [
-    "material POP", "displays", "stands para eventos", "stands para exposiciones", "banners", "roll ups", "publicidad exterior", "displays para eventos",
+    "material POP", "displays", "muros publicitarios", "stands para eventos", "stands para exposiciones", "banners", "roll ups", "publicidad exterior", "displays para eventos",
   ],
   "vinil-rotulacion": [
     "vinil", "rotulación", "vinil de corte", "vinil impreso", "vinil adherible",
@@ -84,6 +84,7 @@ const SERVICE_KEYWORDS: Record<string, string[]> = {
   "lonas": ["lonas", "lonas impresas", "impresión de lonas", "lonas publicitarias"],
   "banners": ["banners", "banners impresos", "banners para eventos"],
   "roll-ups": ["roll up", "roll ups", "porta banner", "displays roll up"],
+  "muro": ["muro publicitario", "muro de prensa", "backing para eventos", "pop up display", "muro de tela"],
   "stand": ["stands", "stands para expos", "stands para ferias", "stands publicitarios", "stand a la medida"],
   "vinil-de-corte": ["corte de vinil", "vinil de corte", "letras de vinil", "rotulación con vinil"],
   "vinil-impreso": ["vinil impreso", "impresión en vinil", "calcomanías"],
@@ -157,7 +158,7 @@ export function getSeoForPath(pathname: string): SeoData {
     if (svc) {
       return {
         title: join(catTitle, svc.tituloServicio, SITE_NAME),
-        description: svc.descripcion,
+        description: svc.descripcion || `${svc.tituloServicio} — ${cat.descripcion}`,
         keywords: [
           ...(SERVICE_KEYWORDS[svc.path] ?? [svc.tituloServicio.toLowerCase()]),
           ...catKeywords.slice(0, 4),
