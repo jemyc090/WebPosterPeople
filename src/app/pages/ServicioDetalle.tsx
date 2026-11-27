@@ -84,6 +84,11 @@ function Lightbox({
             key={item.url}
             src={item.url}
             controls
+            muted
+            playsInline
+            controlsList="nodownload noplaybackrate"
+            disablePictureInPicture
+            onVolumeChange={(e) => { e.currentTarget.muted = true; }}
             autoPlay
             className="max-h-[72vh] w-full object-contain rounded-2xl"
           />

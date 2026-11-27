@@ -95,6 +95,11 @@ function GalleryLightbox({
               src={item.url}
               poster={item.thumbnail}
               controls
+              muted
+              playsInline
+              controlsList="nodownload noplaybackrate"
+              disablePictureInPicture
+              onVolumeChange={(e) => { e.currentTarget.muted = true; }}
               autoPlay
               className="max-h-[75vh] max-w-full rounded-xl object-contain"
               onClick={(e) => e.stopPropagation()}
@@ -564,6 +569,11 @@ export default function CategoriaDetalle() {
                         src={mainImage.url}
                         poster={mainImage.thumbnail}
                         controls
+                        muted
+                        playsInline
+                        controlsList="nodownload noplaybackrate"
+                        disablePictureInPicture
+                        onVolumeChange={(e) => { e.currentTarget.muted = true; }}
                         className="absolute inset-0 w-full h-full object-cover"
                       />
                     ) : (
