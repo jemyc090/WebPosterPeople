@@ -58,7 +58,7 @@ const STATS = [
 
 // Los enlaces se actualizarán cuando estén definidos.
 const SERVICIOS = [
-  { num: "01", nombre: "Merchandising", detalle: "", link: "/servicios" },
+  { num: "01", nombre: "Merchandising", detalle: "", link: "/categorias/impresion/merchandising" },
   { num: "02", nombre: "Impresión", detalle: "pequeño, mediano y gran formato", link: "/categorias/impresion" },
   { num: "03", nombre: "Material POP", detalle: "", link: "/servicios" },
   { num: "04", nombre: "Logos volumétricos", detalle: "3D", link: "/servicios" },

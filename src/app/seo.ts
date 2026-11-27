@@ -38,7 +38,7 @@ const CATEGORY_SEO_TITLE: Record<string, string> = {
 const CATEGORY_KEYWORDS: Record<string, string[]> = {
   "impresion": [
     "impresión digital", "impresión offset", "imprenta", "tarjetas de presentación",
-    "volantes", "flyers", "trípticos", "catálogos", "menús", "etiquetas", "serigrafía",
+    "volantes", "flyers", "trípticos", "catálogos", "menús", "etiquetas", "merchandising", "serigrafía",
     "sublimación", "impresión cama plana", "impresión UV",
   ],
   "gran-formato": [
@@ -79,7 +79,7 @@ const SERVICE_KEYWORDS: Record<string, string[]> = {
   "catalogos": ["catálogos", "impresión de catálogos", "revistas"],
   "cama-plana": ["impresión cama plana", "impresión UV cama plana", "impresión sobre rígidos", "impresión sobre semi rígidos"],
   "sublimacion": ["sublimación", "cintas para gafete", "lanyards personalizados", "sublimación textil"],
-  "serigrafia": ["serigrafía", "serigrafía en playeras", "serigrafía textil"],
+  "merchandising": ["merchandising", "artículos promocionales", "regalos corporativos", "promocionales con logo", "serigrafía"],
   "lonas": ["lonas", "lonas impresas", "impresión de lonas", "lonas publicitarias"],
   "banners": ["banners", "banners impresos", "banners para eventos"],
   "roll-ups": ["roll up", "roll ups", "porta banner", "displays roll up"],

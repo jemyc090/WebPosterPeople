@@ -384,10 +384,10 @@ const todosLosServicios: Servicio[] = [
   },
   {
     orden: 1,
-    path: "serigrafia",
-    tituloServicio: "Serigrafia",
+    path: "merchandising",
+    tituloServicio: "Merchandising",
     descripcion:
-      "Personaliza tus productos con impresiones duraderas y de gran calidad. Nuestro servicio de serigrafía es ideal para plasmar logotipos, diseños y mensajes en playeras, textiles y diversos artículos promocionales.",
+      "Contamos con una variedad extensa de artículos promocionales, regalos corporativos y más, para una mayor proyección de tu marca.",
     esEstrella: true,
     categoriaSlug: "impresion",
     subservicios: [

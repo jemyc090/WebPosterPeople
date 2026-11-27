@@ -10,6 +10,8 @@ import CategoriaDetalle from "./pages/CategoriaDetalle";
 // Redirect components (no JSX needed — Navigate is a component, createElement handles it)
 const ToServicios = () => Navigate({ to: "/servicios", replace: true });
 const ToHome = () => Navigate({ to: "/", replace: true });
+// Serigrafía se renombró a Merchandising: la URL anterior redirige a la nueva
+const ToMerchandising = () => Navigate({ to: "/categorias/impresion/merchandising", replace: true });
 
 export const router = createBrowserRouter([
   {
@@ -22,6 +24,7 @@ export const router = createBrowserRouter([
       // { path: "servicios/:path", Component: ServicioDetalle }, // desactivado temporalmente
       { path: "categorias", Component: CategoriasList },
       { path: "categorias/:slug", Component: CategoriaDetalle },
+      { path: "categorias/impresion/serigrafia", Component: ToMerchandising },
       { path: "categorias/:slug/:servicePath", Component: CategoriaDetalle },
       // Redirige /servicios/:path al catálogo mientras esté desactivado
       { path: "servicios/:path", Component: ToServicios },
