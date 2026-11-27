@@ -30,6 +30,23 @@ import fourDots from "../../imports/06_four_dots.png";
 import nestedCorner from "../../imports/03_nested_corner.png";
 import arrow from "../../imports/12_arrow.png";
 
+// Imágenes del slider (una por categoría)
+import sliderImpresion from "../../imports/sliders/impresion-slider.png";
+import sliderGranFormato from "../../imports/sliders/gran-formato-slider.png";
+import sliderVinil from "../../imports/sliders/vinil-y-rotulacion-slider.jpeg";
+import sliderDtfTextil from "../../imports/sliders/dtf-textil-slider.jpg";
+import sliderDtfUv from "../../imports/sliders/dtf-uv-slider.jpeg";
+import sliderGrabado from "../../imports/sliders/grabado-laser-slider.jpeg";
+
+const sliderImages: Record<string, string> = {
+  "impresion": sliderImpresion,
+  "gran-formato": sliderGranFormato,
+  "vinil-rotulacion": sliderVinil,
+  "dtf-textil": sliderDtfTextil,
+  "dtf-uv": sliderDtfUv,
+  "grabado-corte-laser": sliderGrabado,
+};
+
 // 6 slider categories (excluding "otros-servicios")
 const sliderCats = categorias.filter((c) => c.slug !== "otros-servicios");
 
@@ -123,7 +140,7 @@ export default function Home() {
 
         {/* ── Slider (90%) ── */}
         <div
-          className="relative flex-1 overflow-hidden bg-[#0a0a0a]"
+          className="relative flex-1 overflow-hidden bg-black"
           onTouchStart={handleTouchStart}
           onTouchEnd={handleTouchEnd}
         >
@@ -136,19 +153,20 @@ export default function Home() {
                 className="absolute inset-0 transition-opacity duration-[1500ms]"
                 style={{ opacity: isActive ? 1 : 0, pointerEvents: isActive ? "auto" : "none" }}
               >
-                {/* Full-bleed background image */}
-                <img
-                  src={cat.imagenHero}
-                  alt={cat.titulo}
-                  className="absolute inset-0 w-full h-full object-cover"
-                />
-                {/* Dark base overlay */}
-                <div className="absolute inset-0 bg-black/60" />
-                {/* Gradient: stronger dark on left where text sits */}
-                <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent" />
+                {/* Imagen alineada a la derecha: máx. 50% del ancho en desktop (lg),
+                    el resto queda en fondo negro. En móvil ocupa todo el fondo. */}
+                <div className="absolute inset-0 lg:left-1/2">
+                  <img
+                    src={sliderImages[cat.slug] ?? cat.imagenHero}
+                    alt={cat.titulo}
+                    className="w-full h-full object-cover lg:object-contain lg:object-right"
+                  />
+                </div>
+                {/* Overlay oscuro solo en móvil/tablet, donde el texto va encima de la imagen */}
+                <div className="absolute inset-0 bg-black/60 lg:hidden" />
                 {/* Color tint from category color — bottom vignette */}
                 <div
-                  className="absolute inset-0 opacity-20"
+                  className="absolute inset-0 opacity-20 lg:hidden"
                   style={{ background: `linear-gradient(135deg, ${cat.color}60 0%, transparent 60%)` }}
                 />
               </div>
@@ -166,7 +184,7 @@ export default function Home() {
           {/* ── Slide content ── */}
           <div className="relative z-20 h-full flex items-center">
             <div className="max-w-7xl mx-auto px-6 md:px-10 w-full">
-              <div className="relative max-w-xl min-h-[420px] flex items-center">
+              <div className="relative max-w-xl lg:max-w-[min(36rem,46%)] min-h-[420px] flex items-center">
                 {sliderCats.map((cat, i) => {
                   const isActive = i === currentSlide;
                   const svcs = servicios.filter((s) => s.categoriaSlug === cat.slug).slice(0, 6);
