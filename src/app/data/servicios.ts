@@ -78,6 +78,11 @@ import vinilAdherible9 from "../../imports/vinil-adherible/vinil-adherible-9.jpg
 import instalacion1 from "../../imports/instalacion/instalacion-1.jpg";
 import instalacion2 from "../../imports/instalacion/instalacion-2.jpg";
 import instalacion3 from "../../imports/instalacion/instalacion-3.jpg";
+import vinilImpresoPoster1 from "../../imports/vinil-impreso/video-1-poster.jpg";
+import vinilImpresoPoster6 from "../../imports/vinil-impreso/video-6-poster.jpg";
+import vinilImpresoPoster7 from "../../imports/vinil-impreso/video-7-poster.jpg";
+import vinilImpresoPoster8 from "../../imports/vinil-impreso/video-8-poster.jpg";
+import vinilImpresoPoster9 from "../../imports/vinil-impreso/video-9-poster.jpg";
 import termos1 from "../../imports/termos/termos-1.jpg";
 import stickersUv1 from "../../imports/stickers-uv/stickers-uv-1.jpg";
 import instalacion4 from "../../imports/instalacion/instalacion-4.jpg";
@@ -370,15 +375,10 @@ const todosLosServicios: Servicio[] = [
       { type: "image", url: camaPlana19 },
       { type: "image", url: camaPlana20 },
 
-      { type: "video", url: camaPlanaV1, thumbnail: thumbnailVideo  },
       { type: "video", url: camaPlanaV2, thumbnail: thumbnailVideo  },
       { type: "video", url: camaPlanaV3, thumbnail: thumbnailVideo  },
       { type: "video", url: camaPlanaV4, thumbnail: thumbnailVideo  },
       { type: "video", url: camaPlanaV5, thumbnail: thumbnailVideo  },
-      { type: "video", url: camaPlanaV6, thumbnail: thumbnailVideo  },
-      { type: "video", url: camaPlanaV7, thumbnail: thumbnailVideo  },
-      { type: "video", url: camaPlanaV8, thumbnail: thumbnailVideo  },
-      { type: "video", url: camaPlanaV9, thumbnail: thumbnailVideo  },
 
     ],
   },
@@ -623,10 +623,16 @@ const todosLosServicios: Servicio[] = [
       "Corte recto o personalizado",
       "Para interiores y exteriores",
     ],
-    imagenHero: hero([P.vin[1], ...P.vin]),
+    imagenHero: vinilImpresoPoster1,
     color: "#307FE2",
     icono: "🎨",
-    galeria: gal([P.vin[1], P.vin[0], P.vin[3], P.vin[2], P.vin[4]]),
+    galeria: [
+      { type: "video", url: camaPlanaV1, thumbnail: vinilImpresoPoster1 },
+      { type: "video", url: camaPlanaV6, thumbnail: vinilImpresoPoster6 },
+      { type: "video", url: camaPlanaV7, thumbnail: vinilImpresoPoster7 },
+      { type: "video", url: camaPlanaV8, thumbnail: vinilImpresoPoster8 },
+      { type: "video", url: camaPlanaV9, thumbnail: vinilImpresoPoster9 },
+    ],
   },
   {
     orden: 17,
@@ -1253,6 +1259,7 @@ export const serviciosOcultos = new Set([
   "uniformes",
   "gorras",
   "impresion-dtf-alta-calidad",
+  "etiquetas-premium",
   "vasos",
   "acrilico-uv",
   "vidrio-uv",

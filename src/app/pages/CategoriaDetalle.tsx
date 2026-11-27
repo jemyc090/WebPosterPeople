@@ -464,7 +464,7 @@ export default function CategoriaDetalle() {
                 <div className="relative w-full aspect-[4/3] bg-[#ECEAE4] overflow-hidden">
                   {svc.galeria[0] && (
                     <img
-                      src={svc.galeria[0].url}
+                      src={svc.galeria[0].type === "video" ? (svc.galeria[0].thumbnail ?? svc.imagenHero) : svc.galeria[0].url}
                       alt={svc.tituloServicio}
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                     />
