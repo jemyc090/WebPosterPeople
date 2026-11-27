@@ -78,6 +78,8 @@ import vinilAdherible9 from "../../imports/vinil-adherible/vinil-adherible-9.jpg
 import instalacion1 from "../../imports/instalacion/instalacion-1.jpg";
 import instalacion2 from "../../imports/instalacion/instalacion-2.jpg";
 import instalacion3 from "../../imports/instalacion/instalacion-3.jpg";
+import termos1 from "../../imports/termos/termos-1.jpg";
+import stickersUv1 from "../../imports/stickers-uv/stickers-uv-1.jpg";
 import instalacion4 from "../../imports/instalacion/instalacion-4.jpg";
 import instalacion5 from "../../imports/instalacion/instalacion-5.jpg";
 import entregasEnvios1 from "../../imports/entregas-y-envios/entregas-y-envios-1.jpg";
@@ -843,10 +845,10 @@ const todosLosServicios: Servicio[] = [
       "Corte en cualquier forma",
       "Adhesivo permanente o removible",
     ],
-    imagenHero: hero(P.uv),
+    imagenHero: stickersUv1,
     color: "#FF3EB5",
     icono: "⭐",
-    galeria: gal(P.uv),
+    galeria: [{ type: "image", url: stickersUv1 }],
   },
   {
     orden: 27,
@@ -881,10 +883,10 @@ const todosLosServicios: Servicio[] = [
       "Capacidades 350ml, 500ml y 750ml",
       "Colores metálicos disponibles",
     ],
-    imagenHero: hero([P.uv[2], ...P.uv]),
+    imagenHero: termos1,
     color: "#FF3EB5",
     icono: "☕",
-    galeria: gal([P.uv[2], P.uv[0], P.uv[4], P.uv[1], P.uv[3]]),
+    galeria: [{ type: "image", url: termos1 }],
   },
   {
     orden: 29,
