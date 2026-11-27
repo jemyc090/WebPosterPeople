@@ -576,8 +576,8 @@ export default function Home2() {
                 <div className="space-y-5">
                   {[
                     { icon: Mail,           label: "Email",     value: "contacto@posterpeople.mx",  href: "mailto:contacto@posterpeople.mx" },
-                    { icon: Phone,          label: "Teléfono",  value: "+52 55 2959 9392",          href: "tel:+5529599392" },
-                    { icon: MessageCircle,  label: "WhatsApp",  value: "+52 55 2959 9392",          href: "https://wa.me/5529599392" },
+                    { icon: Phone,          label: "Teléfono",  value: "+52 55 2959 9392",          href: "tel:+525529599392" },
+                    { icon: MessageCircle,  label: "WhatsApp",  value: "+52 55 2959 9392",          href: "https://wa.me/525529599392" },
                   ].map(({ icon: Icon, label, value, href }) => (
                     <a key={label} href={href} className="flex items-start gap-4 group">
                       <div className="w-10 h-10 bg-[#009681] rounded-full flex items-center justify-center shrink-0 group-hover:bg-[#FA4616] transition-colors">

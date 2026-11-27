@@ -73,7 +73,7 @@ export function Footer() {
             </li>
             <li className="flex items-start gap-3 text-white/60 text-sm font-['Barlow']">
               <Phone size={15} className="mt-0.5 shrink-0 text-[#FA4616]" />
-              <span>+52 (55) 1234-5678</span>
+              <a href="tel:+525529599392" className="hover:text-white transition-colors">+52 55 2959 9392</a>
             </li>
             <li className="flex items-start gap-3 text-white/60 text-sm font-['Barlow']">
               <MapPin size={15} className="mt-0.5 shrink-0 text-[#FA4616]" />
