@@ -2,7 +2,7 @@ import { useState, useEffect, useRef, useCallback } from "react";
 import { useParams, useNavigate, Link } from "react-router";
 import { motion, AnimatePresence } from "motion/react";
 import { ChevronRight, ArrowRight, ChevronLeft, X, Maximize2, Play } from "lucide-react";
-import { getCategoriaBySlug, categorias } from "../data/categorias";
+import { getCategoriaBySlug, categorias, textoSobre, acentoDe } from "../data/categorias";
 import { getServiciosByCategoria, type GaleriaItem } from "../data/servicios";
 import { openWhatsApp } from "../utils/whatsapp";
 import { WhatsAppIcon } from "../components/WhatsAppIcon";
@@ -95,6 +95,11 @@ function GalleryLightbox({
               src={item.url}
               poster={item.thumbnail}
               controls
+              muted
+              playsInline
+              controlsList="nodownload noplaybackrate"
+              disablePictureInPicture
+              onVolumeChange={(e) => { e.currentTarget.muted = true; }}
               autoPlay
               className="max-h-[75vh] max-w-full rounded-xl object-contain"
               onClick={(e) => e.stopPropagation()}
@@ -123,7 +128,7 @@ function GalleryLightbox({
       {/* Caption */}
       {item.caption && (
         <div className="text-center py-3 shrink-0">
-          <p className="font-['Barlow'] text-white/60 text-sm">{item.caption}</p>
+          <p className="font-['Montserrat'] text-white/60 text-sm">{item.caption}</p>
         </div>
       )}
 
@@ -230,7 +235,7 @@ function ServiceFilterBar({
             onClick={() => scroll("left")}
             disabled={!canLeft}
             className="pointer-events-auto w-8 h-8 bg-white border border-[#ECEAE4] hover:border-current rounded-full flex items-center justify-center shadow-md transition-colors"
-            style={{ color }}
+            style={{ color: acentoDe(color) }}
           >
             <ChevronLeft size={16} />
           </button>
@@ -247,7 +252,7 @@ function ServiceFilterBar({
             animate={{ opacity: [1, 0.15, 1] }}
             transition={{ duration: 1.1, repeat: Infinity, ease: "easeInOut" }}
           >
-            <ChevronRight size={20} style={{ color }} />
+            <ChevronRight size={20} style={{ color: acentoDe(color) }} />
           </motion.div>
         </div>
       )}
@@ -262,7 +267,7 @@ function ServiceFilterBar({
             animate={{ opacity: [1, 0.15, 1] }}
             transition={{ duration: 1.1, repeat: Infinity, ease: "easeInOut" }}
           >
-            <ChevronLeft size={20} style={{ color }} />
+            <ChevronLeft size={20} style={{ color: acentoDe(color) }} />
           </motion.div>
         </div>
       )}
@@ -278,7 +283,7 @@ function ServiceFilterBar({
           data-active={activeServicePath === "todos"}
           onClick={() => setActiveServicePath("todos")}
           className="shrink-0 font-['Barlow_Condensed'] font-bold text-sm tracking-wide uppercase px-4 py-2 rounded-full transition-all"
-          style={activeServicePath === "todos" ? { backgroundColor: color, color: "#fff" } : { backgroundColor: "#F7F5F0", color: "#53565A" }}
+          style={activeServicePath === "todos" ? { backgroundColor: color, color: textoSobre(color) } : { backgroundColor: "#F7F5F0", color: "#53565A" }}
         >
           Todos
         </button>
@@ -291,7 +296,7 @@ function ServiceFilterBar({
               data-active={isActive}
               onClick={() => setActiveServicePath(svc.path)}
               className="shrink-0 font-['Barlow_Condensed'] font-bold text-sm tracking-wide uppercase px-4 py-2 rounded-full transition-all"
-              style={isActive ? { backgroundColor: color, color: "#fff" } : { backgroundColor: "#F7F5F0", color: "#53565A" }}
+              style={isActive ? { backgroundColor: color, color: textoSobre(color) } : { backgroundColor: "#F7F5F0", color: "#53565A" }}
             >
               {svc.tituloServicio}
             </button>
@@ -309,7 +314,7 @@ function ServiceFilterBar({
             onClick={() => scroll("right")}
             disabled={!canRight}
             className="pointer-events-auto w-8 h-8 bg-white border border-[#ECEAE4] hover:border-current rounded-full flex items-center justify-center shadow-md transition-colors"
-            style={{ color }}
+            style={{ color: acentoDe(color) }}
           >
             <ChevronRight size={16} />
           </button>
@@ -408,15 +413,18 @@ export default function CategoriaDetalle() {
               <span className="font-['Barlow_Condensed'] font-black text-5xl md:text-7xl opacity-10 select-none block leading-none mb-2">
                 {categoria.icono}
               </span>
-              <h1 className="font-['Barlow_Condensed'] font-black text-white text-5xl md:text-7xl uppercase leading-none">
+              <h1 className="font-['Barlow_Condensed'] font-black text-5xl md:text-7xl uppercase leading-none" style={{ color: textoSobre(categoria.color) }}>
                 {categoria.titulo}
               </h1>
-              <p className="font-['Barlow'] text-white/70 text-base mt-2 max-w-lg">
+              <p className="font-['Montserrat'] text-base mt-2 max-w-2xl opacity-70" style={{ color: textoSobre(categoria.color) }}>
                 {categoria.subtitulo}
+                {categoria.detalleEncabezado?.map((linea) => (
+                  <span key={linea} className="block">{linea}</span>
+                ))}
               </p>
             </div>
             <div className="bg-white/15 backdrop-blur-sm border border-white/20 px-4 py-2 rounded-full">
-              <span className="font-['Barlow_Condensed'] font-bold text-white text-sm tracking-widest uppercase">
+              <span className="font-['Barlow_Condensed'] font-bold text-sm tracking-widest uppercase" style={{ color: textoSobre(categoria.color) }}>
                 {serviciosCat.length} servicio{serviciosCat.length !== 1 ? "s" : ""}
               </span>
             </div>
@@ -459,7 +467,7 @@ export default function CategoriaDetalle() {
                 <div className="relative w-full aspect-[4/3] bg-[#ECEAE4] overflow-hidden">
                   {svc.galeria[0] && (
                     <img
-                      src={svc.galeria[0].url}
+                      src={svc.galeria[0].type === "video" ? (svc.galeria[0].thumbnail ?? svc.imagenHero) : svc.galeria[0].url}
                       alt={svc.tituloServicio}
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                     />
@@ -473,12 +481,12 @@ export default function CategoriaDetalle() {
                   <p className="font-['Barlow_Condensed'] font-black text-[#13322B] text-sm uppercase leading-tight line-clamp-2">
                     {svc.tituloServicio}
                   </p>
-                  <p className="font-['Barlow'] text-[#888B8D] text-xs leading-snug line-clamp-2 flex-1">
+                  <p className="font-['Montserrat'] text-[#888B8D] text-xs leading-snug line-clamp-2 flex-1">
                     {svc.descripcion}
                   </p>
                   <span
                     className="mt-1 inline-flex items-center gap-1 font-['Barlow_Condensed'] font-bold text-xs tracking-wide uppercase transition-colors"
-                    style={{ color: categoria.color }}
+                    style={{ color: acentoDe(categoria.color) }}
                   >
                     Ver más <ArrowRight size={11} />
                   </span>
@@ -502,8 +510,8 @@ export default function CategoriaDetalle() {
               {/* Title block */}
               <div className="bg-white rounded-3xl p-8 shadow-sm">
                 <span
-                  className="inline-block font-['Barlow_Condensed'] font-bold text-xs tracking-widest uppercase text-white px-3 py-1 rounded-full mb-4"
-                  style={{ backgroundColor: categoria.color }}
+                  className="inline-block font-['Barlow_Condensed'] font-bold text-xs tracking-widest uppercase px-3 py-1 rounded-full mb-4"
+                  style={{ backgroundColor: categoria.color, color: textoSobre(categoria.color) }}
                 >
                   {categoria.titulo}
                 </span>
@@ -514,7 +522,7 @@ export default function CategoriaDetalle() {
 
                 <div className="w-10 h-1 rounded-full mb-4" style={{ backgroundColor: categoria.color }} />
 
-                <p className="font-['Barlow'] text-[#53565A] text-base leading-relaxed">
+                <p className="font-['Montserrat'] text-[#53565A] text-base leading-relaxed">
                   {activeService.descripcion}
                 </p>
               </div>
@@ -529,7 +537,7 @@ export default function CategoriaDetalle() {
                   {activeService.subservicios.map((sub, i) => (
                     <span
                       key={i}
-                      className="font-['Barlow'] text-xs text-[#53565A] bg-[#F7F5F0] border border-[#ECEAE4] px-3 py-1.5 rounded-full"
+                      className="font-['Montserrat'] text-xs text-[#53565A] bg-[#F7F5F0] border border-[#ECEAE4] px-3 py-1.5 rounded-full"
                     >
                       {sub}
                     </span>
@@ -564,6 +572,11 @@ export default function CategoriaDetalle() {
                         src={mainImage.url}
                         poster={mainImage.thumbnail}
                         controls
+                        muted
+                        playsInline
+                        controlsList="nodownload noplaybackrate"
+                        disablePictureInPicture
+                        onVolumeChange={(e) => { e.currentTarget.muted = true; }}
                         className="absolute inset-0 w-full h-full object-cover"
                       />
                     ) : (
@@ -581,7 +594,7 @@ export default function CategoriaDetalle() {
                   )}
 
                   {/* Fullscreen button (images only) */}
-                  {mainImage?.type !== "video" && (
+                  {mainImage && mainImage.type !== "video" && (
                     <button
                       onClick={() => setLightboxOpen(true)}
                       className="absolute top-3 right-3 z-10 w-8 h-8 bg-black/40 hover:bg-black/60 rounded-full flex items-center justify-center transition-colors opacity-0 group-hover:opacity-100"
@@ -607,9 +620,11 @@ export default function CategoriaDetalle() {
                       </button>
                     </>
                   )}
-                  <div className="absolute bottom-3 left-3 bg-black/40 text-white font-['Barlow'] text-xs px-2.5 py-1 rounded-full z-10">
-                    {activeImageIndex + 1} / {galeria.length}
-                  </div>
+                  {galeria.length > 0 && (
+                    <div className="absolute bottom-3 left-3 bg-black/40 text-white font-['Montserrat'] text-xs px-2.5 py-1 rounded-full z-10">
+                      {activeImageIndex + 1} / {galeria.length}
+                    </div>
+                  )}
                 </div>
 
                 {/* Thumbnail strip */}
@@ -648,7 +663,7 @@ export default function CategoriaDetalle() {
           </motion.div>
         ) : activeServicePath !== "todos" && (
           <div className="flex items-center justify-center h-64">
-            <p className="font-['Barlow'] text-[#888B8D]">Selecciona un servicio</p>
+            <p className="font-['Montserrat'] text-[#888B8D]">Selecciona un servicio</p>
           </div>
         )}
       </div>
@@ -667,7 +682,7 @@ export default function CategoriaDetalle() {
                   key={cat.slug}
                   to={`/categorias/${cat.slug}`}
                   className="flex items-center gap-2 bg-[#F7F5F0] hover:bg-white border border-[#ECEAE4] hover:border-current hover:shadow-sm font-['Barlow_Condensed'] font-bold text-sm tracking-wide uppercase px-5 py-2.5 rounded-full transition-all"
-                  style={{ color: cat.color }}
+                  style={{ color: acentoDe(cat.color) }}
                 >
                   <span>{cat.icono}</span>
                   {cat.titulo}

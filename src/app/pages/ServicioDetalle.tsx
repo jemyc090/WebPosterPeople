@@ -84,6 +84,11 @@ function Lightbox({
             key={item.url}
             src={item.url}
             controls
+            muted
+            playsInline
+            controlsList="nodownload noplaybackrate"
+            disablePictureInPicture
+            onVolumeChange={(e) => { e.currentTarget.muted = true; }}
             autoPlay
             className="max-h-[72vh] w-full object-contain rounded-2xl"
           />
@@ -96,7 +101,7 @@ function Lightbox({
           />
         )}
         {item.caption && (
-          <p className="font-['Barlow'] text-white/70 text-sm text-center">
+          <p className="font-['Montserrat'] text-white/70 text-sm text-center">
             {item.caption}
           </p>
         )}
@@ -150,7 +155,7 @@ export default function ServicioDetalle() {
           <h1 className="font-['Barlow_Condensed'] font-black text-[#13322B] text-4xl uppercase mb-4 -mt-6">
             Servicio no encontrado
           </h1>
-          <p className="font-['Barlow'] text-[#53565A] text-base mb-8">
+          <p className="font-['Montserrat'] text-[#53565A] text-base mb-8">
             El servicio que buscas no existe o fue movido.
           </p>
           <Link
@@ -189,11 +194,13 @@ export default function ServicioDetalle() {
 
       {/* Hero */}
       <section className="relative h-[55vh] min-h-[360px] overflow-hidden">
-        <img
-          src={servicio.imagenHero}
-          alt={servicio.tituloServicio}
-          className="absolute inset-0 w-full h-full object-cover"
-        />
+        {servicio.imagenHero && (
+          <img
+            src={servicio.imagenHero}
+            alt={servicio.tituloServicio}
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+        )}
         <div className="absolute inset-0" style={{ backgroundColor: servicio.color + "E0" }} />
 
         {/* Decorative */}
@@ -246,7 +253,7 @@ export default function ServicioDetalle() {
         <div className="lg:col-span-2 space-y-14">
           <div>
             <div className="w-12 h-1 mb-6 rounded-full" style={{ backgroundColor: servicio.color }} />
-            <p className="font-['Barlow'] text-[#13322B] text-lg leading-relaxed">
+            <p className="font-['Montserrat'] text-[#13322B] text-lg leading-relaxed">
               {servicio.descripcion}
             </p>
           </div>
@@ -263,7 +270,7 @@ export default function ServicioDetalle() {
                     className="shrink-0 mt-0.5"
                     style={{ color: servicio.color }}
                   />
-                  <span className="font-['Barlow'] text-[#13322B] text-base leading-relaxed">
+                  <span className="font-['Montserrat'] text-[#13322B] text-base leading-relaxed">
                     {sub}
                   </span>
                 </li>
@@ -276,7 +283,7 @@ export default function ServicioDetalle() {
             <h2 className="font-['Barlow_Condensed'] font-black text-[#13322B] text-3xl uppercase mb-2">
               Galería de trabajos
             </h2>
-            <p className="font-['Barlow'] text-[#53565A] text-sm mb-8">
+            <p className="font-['Montserrat'] text-[#53565A] text-sm mb-8">
               Ejemplos reales de nuestros trabajos terminados.
             </p>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
@@ -299,7 +306,7 @@ export default function ServicioDetalle() {
                         <ZoomIn size={28} className="text-white drop-shadow-lg" />
                       )}
                       {item.caption && (
-                        <span className="font-['Barlow'] text-white text-xs text-center px-2 leading-tight drop-shadow-lg max-w-[140px]">
+                        <span className="font-['Montserrat'] text-white text-xs text-center px-2 leading-tight drop-shadow-lg max-w-[140px]">
                           {item.caption}
                         </span>
                       )}
@@ -324,7 +331,7 @@ export default function ServicioDetalle() {
             <h3 className="font-['Barlow_Condensed'] font-black text-white text-3xl uppercase mb-3">
               ¿Listo para comenzar?
             </h3>
-            <p className="font-['Barlow'] text-white/80 text-sm mb-6 max-w-md">
+            <p className="font-['Montserrat'] text-white/80 text-sm mb-6 max-w-md">
               Cuéntanos sobre tu proyecto y te daremos una cotización personalizada sin costo.
             </p>
             <button
@@ -355,8 +362,8 @@ export default function ServicioDetalle() {
                   key={label}
                   className={`flex justify-between items-center text-sm pb-3 ${i < arr.length - 1 ? "border-b border-[#ECEAE4]" : ""}`}
                 >
-                  <dt className="font-['Barlow'] text-[#888B8D]">{label}</dt>
-                  <dd className="font-['Barlow'] font-semibold" style={{ color: color ?? "#13322B" }}>
+                  <dt className="font-['Montserrat'] text-[#888B8D]">{label}</dt>
+                  <dd className="font-['Montserrat'] font-semibold" style={{ color: color ?? "#13322B" }}>
                     {value}
                   </dd>
                 </div>
@@ -419,7 +426,7 @@ export default function ServicioDetalle() {
                         className="w-1 h-8 shrink-0 rounded-full transition-all group-hover:h-10"
                         style={{ backgroundColor: svc.color }}
                       />
-                      <span className="font-['Barlow'] font-semibold text-sm text-[#13322B] group-hover:text-[#009681] transition-colors">
+                      <span className="font-['Montserrat'] font-semibold text-sm text-[#13322B] group-hover:text-[#009681] transition-colors">
                         {svc.tituloServicio}
                       </span>
                       <ChevronRight size={14} className="ml-auto text-[#B1B3B3] group-hover:text-[#009681] transition-colors shrink-0" />
@@ -448,7 +455,7 @@ export default function ServicioDetalle() {
             >
               <ArrowLeft size={20} className="text-[#B1B3B3] group-hover:text-[#009681] transition-colors shrink-0" />
               <div>
-                <div className="font-['Barlow'] text-xs text-[#888B8D] uppercase tracking-widest mb-1">Anterior</div>
+                <div className="font-['Montserrat'] text-xs text-[#888B8D] uppercase tracking-widest mb-1">Anterior</div>
                 <div className="font-['Barlow_Condensed'] font-bold text-[#13322B] text-lg uppercase group-hover:text-[#009681] transition-colors">
                   {prevService.tituloServicio}
                 </div>
@@ -461,7 +468,7 @@ export default function ServicioDetalle() {
               className="flex items-center justify-end gap-4 p-8 group hover:bg-[#F7F5F0] transition-colors text-right"
             >
               <div>
-                <div className="font-['Barlow'] text-xs text-[#888B8D] uppercase tracking-widest mb-1">Siguiente</div>
+                <div className="font-['Montserrat'] text-xs text-[#888B8D] uppercase tracking-widest mb-1">Siguiente</div>
                 <div className="font-['Barlow_Condensed'] font-bold text-[#13322B] text-lg uppercase group-hover:text-[#009681] transition-colors">
                   {nextService.tituloServicio}
                 </div>

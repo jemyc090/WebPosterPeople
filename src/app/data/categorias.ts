@@ -1,8 +1,12 @@
+import logoVolumetrico1 from "../../imports/volumetricos/logo-volumetrico-1.jpg";
+
 export interface Categoria {
   slug: string;
   titulo: string;
   subtitulo: string;
   descripcion: string;
+  /** Líneas extra que se muestran bajo el subtítulo en el encabezado de la categoría. */
+  detalleEncabezado?: string[];
   color: string;
   imagenHero: string;
   icono: string;
@@ -12,24 +16,38 @@ export const categorias: Categoria[] = [
   {
     slug: "impresion",
     titulo: "Impresión",
-    subtitulo: "Materiales impresos de alta calidad",
+    subtitulo: "Pequeño y Mediano Formato.",
     descripcion:
-      "Tarjetas de presentación, volantes, trípticos, flyers y más. Impresión profesional que refleja la identidad de tu marca.",
+      "Contamos con Cama plana, tintas UV, medida máxima de impresión 122x244 cm. Plotter Tintas Ecosolventes.",
+    detalleEncabezado: [
+      "Contamos con Cama plana, tintas UV, medida máxima de impresión 122x244 cm",
+      "Plotter Tintas Ecosolventes",
+    ],
     color: "#009681",
     imagenHero:
       "https://images.unsplash.com/photo-1512106374988-c95f566d39ef?w=1400&h=800&fit=crop&auto=format",
     icono: "🖨️",
   },
   {
-    slug: "gran-formato",
-    titulo: "Gran Formato",
-    subtitulo: "Impresión a gran escala para máximo impacto",
+    slug: "material-pop-y-display",
+    titulo: "Material POP y Display",
+    subtitulo: "Exhibe tu marca en eventos y puntos de venta",
     descripcion:
-      "Lonas, banners, roll ups e impresión en cama plana. Haz que tu marca sea visible a gran escala con impresión de alta resolución.",
+      "Banners, roll ups y stands para eventos, exposiciones y puntos de venta. Material POP y displays que hacen visible tu marca.",
     color: "#FA4616",
     imagenHero:
       "https://images.unsplash.com/photo-1693031630369-bd429a57f115?w=1400&h=800&fit=crop&auto=format",
     icono: "🏔️",
+  },
+  {
+    slug: "volumetricos",
+    titulo: "Volumétricos",
+    subtitulo: "Tu marca en tercera dimensión",
+    descripcion:
+      "Logos y letras volumétricas en 3D para fachadas, recepciones y oficinas. Dale presencia y profundidad a tu marca.",
+    color: "#eaded4",
+    imagenHero: logoVolumetrico1,
+    icono: "🔠",
   },
   {
     slug: "vinil-rotulacion",
@@ -87,6 +105,17 @@ export const categorias: Categoria[] = [
     icono: "🔧",
   },
 ];
+
+/** true si el color es claro (el texto encima debe ir oscuro). */
+export const esColorClaro = (hex: string) => {
+  const h = hex.replace("#", "");
+  const [r, g, b] = [0, 2, 4].map((i) => parseInt(h.slice(i, i + 2), 16) / 255);
+  return 0.2126 * r + 0.7152 * g + 0.0722 * b > 0.6;
+};
+/** Color de texto sobre el color de la categoría. */
+export const textoSobre = (hex: string) => (esColorClaro(hex) ? "#13322B" : "#fff");
+/** Color para usar como acento sobre fondo blanco (texto, flechas). */
+export const acentoDe = (hex: string) => (esColorClaro(hex) ? "#13322B" : hex);
 
 export const getCategoriaBySlug = (slug: string) =>
   categorias.find((c) => c.slug === slug);

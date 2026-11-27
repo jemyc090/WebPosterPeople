@@ -126,6 +126,8 @@
 
   body {
     @apply bg-background text-foreground;
+    /* Textos descriptivos en Montserrat; títulos y menú usan Barlow Condensed por clase */
+    font-family: 'Montserrat', sans-serif;
   }
 
   /**

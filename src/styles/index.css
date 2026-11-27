@@ -7,3 +7,10 @@
     cursor: pointer;
   }
 }
+
+/* Videos sin audio: se oculta el botón de bocina y la barra de volumen */
+video::-webkit-media-controls-mute-button,
+video::-webkit-media-controls-volume-slider,
+video::-webkit-media-controls-volume-control-container {
+  display: none !important;
+}

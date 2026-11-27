@@ -1,7 +1,7 @@
 // ─── WhatsApp config ──────────────────────────────────────────────────────────
 // Cambia el número y la plantilla aquí para actualizar todos los botones a la vez.
 
-export const WA_NUMBER = "5529599392";
+export const WA_NUMBER = "525529599392"; // 52 (México) + 55 2959 9392
 
 /**
  * Construye el mensaje de WhatsApp.

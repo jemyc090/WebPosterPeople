@@ -2,6 +2,17 @@
 
 import thumbnailVideo from "../../imports/thumbnail-video.png";
 
+import muro1 from "../../imports/muro/muro-1.jpg";
+import muro2 from "../../imports/muro/muro-2.jpg";
+import muro3 from "../../imports/muro/muro-3.jpg";
+import sublimacion1 from "../../imports/sublimacion/sublimacion-1.jpg";
+import senaletica1 from "../../imports/senaletica/senaletica-1.jpg";
+import senaletica2 from "../../imports/senaletica/senaletica-2.jpg";
+import lona1 from "../../imports/lonas/lona-1.jpg";
+import cvImg7 from "../../imports/corte-de-vinil/corte-de-vinil-7.jpg";
+import cvImg8 from "../../imports/corte-de-vinil/corte-de-vinil-8.jpg";
+import cvImg9 from "../../imports/corte-de-vinil/corte-de-vinil-9.jpg";
+import logoVolumetrico1 from "../../imports/volumetricos/logo-volumetrico-1.jpg";
 import camaPlana1 from "../../imports/cama-plana/cama-plana-1.jpg";
 import camaPlana2 from "../../imports/cama-plana/cama-plana-2.jpg";
 import camaPlana3 from "../../imports/cama-plana/cama-plana-3.jpg";
@@ -24,7 +35,7 @@ import camaPlana19 from "../../imports/cama-plana/cama-plana-19.jpg";
 import camaPlana20 from "../../imports/cama-plana/cama-plana-20.jpg";
 import camaPlanaV1 from "../../imports/cama-plana/cama-plana-1.mp4";
 import camaPlanaV2 from "../../imports/cama-plana/cama-plana-2.mp4";
-import camaPlanaV3 from "../../imports/cama-plana/cama-plana-2.mp4";
+import camaPlanaV3 from "../../imports/cama-plana/cama-plana-3.mp4";
 import camaPlanaV4 from "../../imports/cama-plana/cama-plana-4.mp4";
 import camaPlanaV5 from "../../imports/cama-plana/cama-plana-5.mp4";
 import camaPlanaV6 from "../../imports/cama-plana/cama-plana-6.mp4";
@@ -78,6 +89,13 @@ import vinilAdherible9 from "../../imports/vinil-adherible/vinil-adherible-9.jpg
 import instalacion1 from "../../imports/instalacion/instalacion-1.jpg";
 import instalacion2 from "../../imports/instalacion/instalacion-2.jpg";
 import instalacion3 from "../../imports/instalacion/instalacion-3.jpg";
+import vinilImpresoPoster1 from "../../imports/vinil-impreso/video-1-poster.jpg";
+import vinilImpresoPoster6 from "../../imports/vinil-impreso/video-6-poster.jpg";
+import vinilImpresoPoster7 from "../../imports/vinil-impreso/video-7-poster.jpg";
+import vinilImpresoPoster8 from "../../imports/vinil-impreso/video-8-poster.jpg";
+import vinilImpresoPoster9 from "../../imports/vinil-impreso/video-9-poster.jpg";
+import termos1 from "../../imports/termos/termos-1.jpg";
+import stickersUv1 from "../../imports/stickers-uv/stickers-uv-1.jpg";
 import instalacion4 from "../../imports/instalacion/instalacion-4.jpg";
 import instalacion5 from "../../imports/instalacion/instalacion-5.jpg";
 import entregasEnvios1 from "../../imports/entregas-y-envios/entregas-y-envios-1.jpg";
@@ -340,97 +358,39 @@ const todosLosServicios: Servicio[] = [
     galeria: gal([P.imp[2], P.imp[4], P.imp[1], P.imp[0], P.imp[3]]),
   },
   */
+  // Cama plana se dividió en Señalética, Lonas, Acrílicos/rígidos y Photo frame.
   {
     orden: 1,
-    path: "cama-plana",
-    tituloServicio: "Cama Plana",
+    path: "senaletica",
+    tituloServicio: "Señalética",
     descripcion:
-      "Realizamos impresiones con un sistema digital directo que utiliza luz ultravioleta (UV), trabajamos con una gran variedad de objetos y placas rígidas o flexibles sin necesidad de usar papel de transferencia.",
+      "Señalización para oficinas, sucursales y espacios corporativos: señales de seguridad, baños, áreas y reglamentos, impresas directo sobre rígidos con tintas UV.",
     esEstrella: true,
     categoriaSlug: "impresion",
     subservicios: [
     ],
-    imagenHero: camaPlana15,
+    imagenHero: camaPlana3,
     color: "#009681",
-    icono: "🃏",
+    icono: "🪧",
     galeria: [
-      { type: "image", url: camaPlana1 },
-      { type: "image", url: camaPlana2 },
       { type: "image", url: camaPlana3 },
       { type: "image", url: camaPlana4 },
-      { type: "image", url: camaPlana5 },
-      { type: "image", url: camaPlana6 },
-      { type: "image", url: camaPlana7 },
-      { type: "image", url: camaPlana8 },
-      { type: "image", url: camaPlana9 },
-      { type: "image", url: camaPlana10 },
-      { type: "image", url: camaPlana11 },
-      { type: "image", url: camaPlana12 },
-      { type: "image", url: camaPlana13 },
-      { type: "image", url: camaPlana14 },
-      { type: "image", url: camaPlana15 },
       { type: "image", url: camaPlana16 },
-      { type: "image", url: camaPlana17 },
-      { type: "image", url: camaPlana18 },
       { type: "image", url: camaPlana19 },
-      { type: "image", url: camaPlana20 },
-
-      { type: "video", url: camaPlanaV1, thumbnail: thumbnailVideo  },
-      { type: "video", url: camaPlanaV2, thumbnail: thumbnailVideo  },
-      { type: "video", url: camaPlanaV3, thumbnail: thumbnailVideo  },
-      { type: "video", url: camaPlanaV4, thumbnail: thumbnailVideo  },
-      { type: "video", url: camaPlanaV5, thumbnail: thumbnailVideo  },
-      { type: "video", url: camaPlanaV6, thumbnail: thumbnailVideo  },
-      { type: "video", url: camaPlanaV7, thumbnail: thumbnailVideo  },
-      { type: "video", url: camaPlanaV8, thumbnail: thumbnailVideo  },
-      { type: "video", url: camaPlanaV9, thumbnail: thumbnailVideo  },
-
+      { type: "image", url: camaPlana13 },
+      { type: "image", url: senaletica1 },
+      { type: "image", url: senaletica2 },
+      { type: "video", url: camaPlanaV2, thumbnail: thumbnailVideo },
     ],
   },
   {
-    orden: 1,
-    path: "serigrafia",
-    tituloServicio: "Serigrafia",
-    descripcion:
-      "Personaliza tus productos con impresiones duraderas y de gran calidad. Nuestro servicio de serigrafía es ideal para plasmar logotipos, diseños y mensajes en playeras, textiles y diversos artículos promocionales.",
-    esEstrella: true,
-    categoriaSlug: "impresion",
-    subservicios: [
-    ],
-    imagenHero: serigrafia13,
-    color: "#009681",
-    icono: "🃏",
-    galeria: [
-      { type: "image", url: serigrafia1 },
-      { type: "image", url: serigrafia2 },
-      { type: "image", url: serigrafia3 },
-      { type: "image", url: serigrafia4 },
-      { type: "image", url: serigrafia5 },
-      { type: "image", url: serigrafia6 },
-      { type: "image", url: serigrafia7 },
-      { type: "image", url: serigrafia8 },
-      { type: "image", url: serigrafia9 },
-      { type: "image", url: serigrafia10 },
-      { type: "image", url: serigrafia11 },
-      { type: "image", url: serigrafia12 },
-      { type: "image", url: serigrafia13 },
-      { type: "image", url: serigrafia14 },
-      { type: "image", url: serigrafia15 },
-      { type: "image", url: serigrafia16 },
-      { type: "image", url: serigrafia17 },
-      { type: "image", url: serigrafia18 },
-      { type: "image", url: serigrafia19 },
-    ],
-  },
-  // ── GRAN FORMATO ───────────────────────────────────────────────────────────
-  {
-    orden: 8,
+    orden: 2,
     path: "lonas",
     tituloServicio: "Lonas",
     descripcion:
-      "Lonas publicitarias de alta resolución para exteriores e interiores. Resistentes al sol, lluvia y viento. El clásico del gran formato.",
+      "Lonas publicitarias de alta resolución para exteriores e interiores, impresas en plotter con tintas ecosolventes. Resistentes al sol, lluvia y viento.",
     esEstrella: true,
-    categoriaSlug: "gran-formato",
+    categoriaSlug: "impresion",
     subservicios: [
       "Resolución hasta 1440 dpi",
       "Lona de 13 oz y 18 oz",
@@ -438,11 +398,127 @@ const todosLosServicios: Servicio[] = [
       "Tamaños hasta 3m de ancho",
       "Apta para exterior e interior",
     ],
-    imagenHero: hero(P.gf),
-    color: "#FA4616",
+    imagenHero: camaPlana7,
+    color: "#009681",
     icono: "🏁",
-    galeria: gal(P.gf),
+    galeria: [
+      { type: "image", url: camaPlana7 },
+      { type: "image", url: camaPlana17 },
+      { type: "image", url: camaPlana15 },
+      { type: "image", url: camaPlana8 },
+      { type: "image", url: lona1 },
+      { type: "video", url: camaPlanaV3, thumbnail: thumbnailVideo },
+    ],
   },
+  {
+    orden: 3,
+    path: "acrilicos-coroplast-foamboard",
+    tituloServicio: "Acrílicos, Coroplast, Foamboard, Estireno, PVC espumado",
+    descripcion:
+      "Impresión directa en cama plana con tintas UV sobre acrílico, coroplast, foamboard, estireno y PVC espumado. Medida máxima de impresión 122x244 cm.",
+    esEstrella: false,
+    categoriaSlug: "impresion",
+    subservicios: [
+    ],
+    imagenHero: "", // sin foto por ahora
+    color: "#009681",
+    icono: "🧱",
+    galeria: [
+      // Galería vacía por ahora (pendiente de fotos de acrílicos, coroplast, etc.)
+    ],
+  },
+  {
+    orden: 4,
+    path: "photo-frame",
+    tituloServicio: "Photo Frame, figuras a contorno",
+    descripcion:
+      "Photo frames y figuras recortadas a contorno para eventos, activaciones de marca y exhibición en punto de venta.",
+    esEstrella: false,
+    categoriaSlug: "impresion",
+    subservicios: [
+    ],
+    imagenHero: camaPlana5,
+    color: "#009681",
+    icono: "🖼️",
+    galeria: [
+      { type: "image", url: camaPlana5 },
+      { type: "image", url: camaPlana6 },
+    ],
+  },
+  {
+    orden: 5,
+    path: "merchandising",
+    tituloServicio: "Merchandising",
+    descripcion:
+      "Contamos con una variedad extensa de artículos promocionales, regalos corporativos y más, para una mayor proyección de tu marca.",
+    esEstrella: true,
+    categoriaSlug: "impresion",
+    subservicios: [
+    ],
+    imagenHero: serigrafia3,
+    color: "#009681",
+    icono: "🃏",
+    galeria: [
+      // { type: "image", url: serigrafia1 }, // oculta
+      // { type: "image", url: serigrafia2 }, // oculta
+      { type: "image", url: serigrafia3 },
+      // { type: "image", url: serigrafia4 }, // oculta
+      { type: "image", url: serigrafia5 },
+      { type: "image", url: serigrafia6 },
+      { type: "image", url: serigrafia7 },
+      { type: "image", url: serigrafia8 },
+      { type: "image", url: serigrafia9 },
+      { type: "image", url: serigrafia10 },
+      // { type: "image", url: serigrafia11 }, // oculta
+      // { type: "image", url: serigrafia12 }, // oculta
+      // { type: "image", url: serigrafia13 }, // oculta
+      // { type: "image", url: serigrafia14 }, // oculta
+      { type: "image", url: serigrafia15 },
+      { type: "image", url: serigrafia16 },
+      { type: "image", url: serigrafia17 },
+      { type: "image", url: serigrafia18 },
+      { type: "image", url: serigrafia19 },
+    ],
+  },
+  {
+    orden: 6,
+    path: "sublimacion",
+    tituloServicio: "Sublimación",
+    descripcion:
+      "Personalizamos cintas para gafete, textiles y artículos promocionales con sublimación: colores vivos, a todo color y duraderos, que no se desprenden ni se cuartean.",
+    esEstrella: false,
+    categoriaSlug: "impresion",
+    subservicios: [
+    ],
+    imagenHero: camaPlana1,
+    color: "#009681",
+    icono: "🎨",
+    galeria: [
+      { type: "image", url: camaPlana1 },
+      { type: "image", url: camaPlana2 },
+      { type: "image", url: camaPlana12 },
+      { type: "image", url: sublimacion1 },
+    ],
+  },
+  // ── VOLUMÉTRICOS ───────────────────────────────────────────────────────────
+  {
+    orden: 1,
+    path: "logos-volumetricos",
+    tituloServicio: "Logos volumétricos",
+    descripcion:
+      "Logos y letras volumétricas en 3D de acero, aluminio, acrílico y más, fabricados a la medida para fachadas, recepciones y oficinas.",
+    esEstrella: true,
+    categoriaSlug: "volumetricos",
+    subservicios: [
+    ],
+    imagenHero: logoVolumetrico1,
+    color: "#eaded4",
+    icono: "🔠",
+    galeria: [
+      { type: "image", url: logoVolumetrico1 },
+    ],
+  },
+  // ── MATERIAL POP Y DISPLAY ───────────────────────────────────────────────────────────
   {
     orden: 9,
     path: "banners",
@@ -450,7 +526,7 @@ const todosLosServicios: Servicio[] = [
     descripcion:
       "Banners verticales y horizontales para eventos, tiendas, ferias y exposiciones. Impacto visual garantizado en cualquier espacio.",
     esEstrella: false,
-    categoriaSlug: "gran-formato",
+    categoriaSlug: "material-pop-y-display",
     subservicios: [
       "Diferentes tamaños estándar",
       "Con o sin estructura",
@@ -472,7 +548,7 @@ const todosLosServicios: Servicio[] = [
     descripcion:
       "Backings para eventos, conferencias y entrevistas. El fondo perfecto que refuerza tu imagen de marca en cada aparición.",
     esEstrella: false,
-    categoriaSlug: "gran-formato",
+    categoriaSlug: "material-pop-y-display",
     subservicios: [
       "Tela display de alta definición",
       "Con estructura desmontable",
@@ -491,7 +567,7 @@ const todosLosServicios: Servicio[] = [
     descripcion:
       "Roll ups retráctiles para stands, recepciones y puntos de venta. Portátiles, elegantes y reutilizables.",
     esEstrella: false,
-    categoriaSlug: "gran-formato",
+    categoriaSlug: "material-pop-y-display",
     subservicios: [
       "Tamaños 80×200 cm y 100×200 cm",
       "Estructura de aluminio incluida",
@@ -508,12 +584,47 @@ const todosLosServicios: Servicio[] = [
   },
   {
     orden: 12,
+    path: "stand",
+    tituloServicio: "Stand",
+    descripcion:
+      "Stands para exposiciones, ferias y eventos corporativos, diseñados y producidos a la medida de tu marca.",
+    esEstrella: false,
+    categoriaSlug: "material-pop-y-display",
+    subservicios: [
+    ],
+    imagenHero: "", // sin foto por ahora
+    color: "#FA4616",
+    icono: "🏬",
+    galeria: [
+      // Galería vacía por ahora (pendiente de fotos de stands)
+    ],
+  },
+  {
+    orden: 13,
+    path: "muro",
+    tituloServicio: "Muro",
+    descripcion: "",
+    esEstrella: false,
+    categoriaSlug: "material-pop-y-display",
+    subservicios: [
+    ],
+    imagenHero: muro1,
+    color: "#FA4616",
+    icono: "🧱",
+    galeria: [
+      { type: "image", url: muro1 },
+      { type: "image", url: muro2 },
+      { type: "image", url: muro3 },
+    ],
+  },
+  {
+    orden: 12,
     path: "microperforado",
     tituloServicio: "Microperforado",
     descripcion:
       "Vinil microperforado para ventanas y vitrinas. Visibilidad total desde afuera y privacidad desde adentro con impresión full color.",
     esEstrella: false,
-    categoriaSlug: "gran-formato",
+    categoriaSlug: "material-pop-y-display",
     subservicios: [
       "Visión 70/30 o 50/50",
       "Impresión full color exterior",
@@ -532,7 +643,7 @@ const todosLosServicios: Servicio[] = [
     descripcion:
       "Impresión en canvas para arte, fotografía y decoración. Textura única que da vida a tus imágenes con acabado de galería.",
     esEstrella: false,
-    categoriaSlug: "gran-formato",
+    categoriaSlug: "material-pop-y-display",
     subservicios: [
       "Tela canvas 100% algodón",
       "Con o sin bastidor",
@@ -551,7 +662,7 @@ const todosLosServicios: Servicio[] = [
     descripcion:
       "Papel tapiz personalizado para transformar cualquier espacio. Diseños únicos para oficinas, restaurantes, hoteles y hogares.",
     esEstrella: false,
-    categoriaSlug: "gran-formato",
+    categoriaSlug: "material-pop-y-display",
     subservicios: [
       "Material lavable y durable",
       "Instalación profesional disponible",
@@ -568,7 +679,7 @@ const todosLosServicios: Servicio[] = [
   {
     orden: 15,
     path: "vinil-de-corte",
-    tituloServicio: "Vinil de Corte",
+    tituloServicio: "Corte de Vinil",
     descripcion:
       "Corte preciso de vinil adhesivo para letras, logotipos y gráficos. Acabado profesional en cualquier superficie plana.",
     esEstrella: false,
@@ -589,6 +700,9 @@ const todosLosServicios: Servicio[] = [
       { type: "image", url: cvImg4 },
       { type: "image", url: cvImg5 },
       { type: "image", url: cvImg6 },
+      { type: "image", url: cvImg7 },
+      { type: "image", url: cvImg8 },
+      { type: "image", url: cvImg9 },
     ],
   },
   {
@@ -605,10 +719,16 @@ const todosLosServicios: Servicio[] = [
       "Corte recto o personalizado",
       "Para interiores y exteriores",
     ],
-    imagenHero: hero([P.vin[1], ...P.vin]),
+    imagenHero: vinilImpresoPoster1,
     color: "#307FE2",
     icono: "🎨",
-    galeria: gal([P.vin[1], P.vin[0], P.vin[3], P.vin[2], P.vin[4]]),
+    galeria: [
+      { type: "video", url: camaPlanaV1, thumbnail: vinilImpresoPoster1 },
+      { type: "video", url: camaPlanaV6, thumbnail: vinilImpresoPoster6 },
+      { type: "video", url: camaPlanaV7, thumbnail: vinilImpresoPoster7 },
+      { type: "video", url: camaPlanaV8, thumbnail: vinilImpresoPoster8 },
+      { type: "video", url: camaPlanaV9, thumbnail: vinilImpresoPoster9 },
+    ],
   },
   {
     orden: 17,
@@ -796,11 +916,10 @@ const todosLosServicios: Servicio[] = [
       "Diferentes tamaños disponibles",
       "Opción de serigrafía para tirajes grandes",
     ],
-    imagenHero: bolsasTela1,
+    imagenHero: bolsasTela2,
     color: "#154734",
     icono: "👜",
     galeria: [
-      { type: "image", url: bolsasTela1 },
       { type: "image", url: bolsasTela2 },
       { type: "image", url: bolsasTela3 },
       { type: "image", url: bolsasTela4 },
@@ -843,10 +962,10 @@ const todosLosServicios: Servicio[] = [
       "Corte en cualquier forma",
       "Adhesivo permanente o removible",
     ],
-    imagenHero: hero(P.uv),
+    imagenHero: stickersUv1,
     color: "#FF3EB5",
     icono: "⭐",
-    galeria: gal(P.uv),
+    galeria: [{ type: "image", url: stickersUv1 }],
   },
   {
     orden: 27,
@@ -881,10 +1000,10 @@ const todosLosServicios: Servicio[] = [
       "Capacidades 350ml, 500ml y 750ml",
       "Colores metálicos disponibles",
     ],
-    imagenHero: hero([P.uv[2], ...P.uv]),
+    imagenHero: termos1,
     color: "#FF3EB5",
     icono: "☕",
-    galeria: gal([P.uv[2], P.uv[0], P.uv[4], P.uv[1], P.uv[3]]),
+    galeria: [{ type: "image", url: termos1 }],
   },
   {
     orden: 29,
@@ -1126,6 +1245,7 @@ const todosLosServicios: Servicio[] = [
     galeria: [
       { type: "image", url: catering1 },
       { type: "image", url: catering2 },
+      { type: "image", url: boxLunch1 },
       { type: "video", url: cateringVid1, thumbnail: thumbnailVideo },
       { type: "video", url: cateringVid2, thumbnail: thumbnailVideo },
       { type: "video", url: cateringVid3, thumbnail: thumbnailVideo },
@@ -1231,8 +1351,14 @@ export const serviciosOcultos = new Set([
   "decoracion-de-espacios",
   "rotulacion-de-negocios",
   "rotulacion-vehicular",
+  "playeras-personalizadas",
   "sudaderas",
   "uniformes",
+  "gorras",
+  "impresion-dtf-alta-calidad",
+  "etiquetas-premium",
+  "box-lunch",
+  "diseno-grafico",
   "vasos",
   "acrilico-uv",
   "vidrio-uv",

@@ -2,9 +2,13 @@ import { Outlet, useLocation } from "react-router";
 import { useEffect } from "react";
 import { Navbar } from "./components/Navbar";
 import { Footer } from "./components/Footer";
+import { useSeo } from "./seo";
 
 export default function Root() {
   const { pathname } = useLocation();
+
+  // Title, description, keywords y Open Graph según la sección
+  useSeo();
 
   // Scroll to top only on real page navigation.
   // Skip when only the service sub-path changes within /categorias/:slug/:servicePath

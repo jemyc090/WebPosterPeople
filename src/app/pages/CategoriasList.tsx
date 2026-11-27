@@ -1,7 +1,7 @@
 import { Link } from "react-router";
 import { motion } from "motion/react";
 import { ChevronRight, ArrowRight } from "lucide-react";
-import { categorias } from "../data/categorias";
+import { categorias, textoSobre } from "../data/categorias";
 import { servicios } from "../data/servicios";
 
 import starburst from "../../imports/02_starburst.png";
@@ -34,7 +34,7 @@ export default function CategoriasList() {
               Categorías
             </span>
           </h1>
-          <p className="font-['Barlow'] text-white/60 text-base max-w-xl leading-relaxed">
+          <p className="font-['Montserrat'] text-white/60 text-base max-w-xl leading-relaxed">
             Selecciona una categoría para explorar todos los servicios y productos disponibles.
           </p>
         </div>
@@ -82,15 +82,15 @@ export default function CategoriasList() {
                       <div>
                         {/* Orden badge */}
                         <span
-                          className="inline-block font-['Barlow_Condensed'] font-black text-xs tracking-widest uppercase text-white px-3 py-1 rounded-full mb-4"
-                          style={{ backgroundColor: cat.color }}
+                          className="inline-block font-['Barlow_Condensed'] font-black text-xs tracking-widest uppercase px-3 py-1 rounded-full mb-4"
+                          style={{ backgroundColor: cat.color, color: textoSobre(cat.color) }}
                         >
                           {String(i + 1).padStart(2, "0")}
                         </span>
                         <h2 className="font-['Barlow_Condensed'] font-black text-[#13322B] text-4xl lg:text-5xl uppercase leading-none group-hover:text-[#13322B] transition-colors mb-1">
                           {cat.titulo}
                         </h2>
-                        <p className="font-['Barlow'] text-[#53565A] text-sm">
+                        <p className="font-['Montserrat'] text-[#53565A] text-sm">
                           {cat.subtitulo}
                         </p>
                       </div>
@@ -104,7 +104,7 @@ export default function CategoriasList() {
                     </div>
 
                     <div className="flex items-end justify-between mt-6">
-                      <p className="font-['Barlow'] text-[#888B8D] text-sm leading-relaxed max-w-sm">
+                      <p className="font-['Montserrat'] text-[#888B8D] text-sm leading-relaxed max-w-sm">
                         {cat.descripcion}
                       </p>
                       <div className="flex items-center gap-4 ml-6 shrink-0">
@@ -112,8 +112,8 @@ export default function CategoriasList() {
                           {count} servicio{count !== 1 ? "s" : ""}
                         </span>
                         <div
-                          className="w-10 h-10 rounded-full flex items-center justify-center text-white transition-transform duration-300 group-hover:scale-110 group-hover:translate-x-1"
-                          style={{ backgroundColor: cat.color }}
+                          className="w-10 h-10 rounded-full flex items-center justify-center transition-transform duration-300 group-hover:scale-110 group-hover:translate-x-1"
+                          style={{ backgroundColor: cat.color, color: textoSobre(cat.color) }}
                         >
                           <ArrowRight size={18} />
                         </div>
@@ -135,7 +135,7 @@ export default function CategoriasList() {
           <h2 className="font-['Barlow_Condensed'] font-black text-white text-4xl lg:text-5xl uppercase mb-4">
             ¿No encuentras lo que buscas?
           </h2>
-          <p className="font-['Barlow'] text-white/60 text-base mb-8">
+          <p className="font-['Montserrat'] text-white/60 text-base mb-8">
             Cuéntanos tu idea y encontramos la solución ideal para tu proyecto.
           </p>
           <Link

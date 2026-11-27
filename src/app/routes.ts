@@ -1,4 +1,4 @@
-import { createBrowserRouter, Navigate } from "react-router";
+import { createBrowserRouter, Navigate, useParams } from "react-router";
 import Root from "./Root";
 import Home from "./pages/Home";
 import Home2 from "./pages/Home2";
@@ -10,6 +10,15 @@ import CategoriaDetalle from "./pages/CategoriaDetalle";
 // Redirect components (no JSX needed — Navigate is a component, createElement handles it)
 const ToServicios = () => Navigate({ to: "/servicios", replace: true });
 const ToHome = () => Navigate({ to: "/", replace: true });
+// Serigrafía se renombró a Merchandising: la URL anterior redirige a la nueva
+const ToLonas = () => Navigate({ to: "/categorias/impresion/lonas", replace: true });
+const ToCategoriaImpresion = () => Navigate({ to: "/categorias/impresion", replace: true });
+// Gran Formato se renombró a Material POP y Display: las URLs anteriores redirigen
+const ToMaterialPop = () => {
+  const { servicePath } = useParams();
+  return Navigate({ to: `/categorias/material-pop-y-display${servicePath ? `/${servicePath}` : ""}`, replace: true });
+};
+const ToMerchandising = () => Navigate({ to: "/categorias/impresion/merchandising", replace: true });
 
 export const router = createBrowserRouter([
   {
@@ -21,7 +30,12 @@ export const router = createBrowserRouter([
       { path: "servicios", Component: Servicios },
       // { path: "servicios/:path", Component: ServicioDetalle }, // desactivado temporalmente
       { path: "categorias", Component: CategoriasList },
+      { path: "categorias/gran-formato", Component: ToMaterialPop },
       { path: "categorias/:slug", Component: CategoriaDetalle },
+      { path: "categorias/impresion/serigrafia", Component: ToMerchandising },
+      { path: "categorias/gran-formato/lonas", Component: ToLonas },
+      { path: "categorias/gran-formato/:servicePath", Component: ToMaterialPop },
+      { path: "categorias/impresion/cama-plana", Component: ToCategoriaImpresion },
       { path: "categorias/:slug/:servicePath", Component: CategoriaDetalle },
       // Redirige /servicios/:path al catálogo mientras esté desactivado
       { path: "servicios/:path", Component: ToServicios },

@@ -2,7 +2,7 @@ import { useState, useRef, useEffect, useCallback } from "react";
 import { Link } from "react-router";
 import { motion } from "motion/react";
 import { ChevronRight, ChevronLeft, ArrowRight, Grid3X3 } from "lucide-react";
-import { categorias } from "../data/categorias";
+import { categorias, textoSobre, acentoDe } from "../data/categorias";
 import { servicios } from "../data/servicios";
 
 import starburst from "../../imports/02_starburst.png";
@@ -140,7 +140,7 @@ function FilterBar({
               className="flex items-center gap-1.5 shrink-0 font-['Barlow_Condensed'] font-bold text-sm tracking-wide uppercase px-4 py-2 rounded-full transition-all"
               style={
                 isActive
-                  ? { backgroundColor: cat.color, color: "#fff" }
+                  ? { backgroundColor: cat.color, color: textoSobre(cat.color) }
                   : { backgroundColor: "#F7F5F0", color: "#53565A" }
               }
             >
@@ -235,15 +235,16 @@ export default function Servicios() {
             <div className="flex items-center gap-3">
               <span className="text-2xl">{categoriaActiva.icono}</span>
               <div>
-                <h2 className="font-['Barlow_Condensed'] font-black text-white text-2xl uppercase leading-none">
+                <h2 className="font-['Barlow_Condensed'] font-black text-2xl uppercase leading-none" style={{ color: textoSobre(categoriaActiva.color) }}>
                   {categoriaActiva.titulo}
                 </h2>
-                <p className="font-['Barlow'] text-white/70 text-sm mt-0.5">{categoriaActiva.subtitulo}</p>
+                <p className="font-['Montserrat'] text-sm mt-0.5 opacity-70" style={{ color: textoSobre(categoriaActiva.color) }}>{categoriaActiva.subtitulo}</p>
               </div>
             </div>
             <Link
               to={`/categorias/${categoriaActiva.slug}`}
-              className="flex items-center gap-2 bg-white/15 hover:bg-white/25 border border-white/25 text-white font-['Barlow_Condensed'] font-bold text-xs tracking-widest uppercase px-4 py-2 rounded-full transition-colors"
+              className="flex items-center gap-2 bg-white/15 hover:bg-white/25 border border-white/25 font-['Barlow_Condensed'] font-bold text-xs tracking-widest uppercase px-4 py-2 rounded-full transition-colors"
+              style={{ color: textoSobre(categoriaActiva.color) }}
             >
               Ver categoría <ChevronRight size={12} />
             </Link>
@@ -268,19 +269,23 @@ export default function Servicios() {
                   className="group flex flex-col bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 h-full"
                 >
                   <div className="relative h-48 overflow-hidden">
-                    <img
-                      src={svc.imagenHero}
-                      alt={svc.tituloServicio}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
+                    {svc.imagenHero ? (
+                      <img
+                        src={svc.imagenHero}
+                        alt={svc.tituloServicio}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                    ) : (
+                      <div className="w-full h-full" style={{ backgroundColor: svc.color }} />
+                    )}
                     <div
                       className="absolute inset-0 opacity-0 group-hover:opacity-40 transition-opacity duration-300"
                       style={{ backgroundColor: svc.color }}
                     />
                     {cat && (
                       <span
-                        className="absolute top-3 left-3 font-['Barlow_Condensed'] font-bold text-[10px] tracking-widest uppercase text-white px-2.5 py-1 rounded-full"
-                        style={{ backgroundColor: cat.color }}
+                        className="absolute top-3 left-3 font-['Barlow_Condensed'] font-bold text-[10px] tracking-widest uppercase px-2.5 py-1 rounded-full"
+                        style={{ backgroundColor: cat.color, color: textoSobre(cat.color) }}
                       >
                         {cat.titulo}
                       </span>
@@ -294,12 +299,12 @@ export default function Servicios() {
                     <h3 className="font-['Barlow_Condensed'] font-black text-[#13322B] text-xl uppercase leading-tight mb-2">
                       {svc.tituloServicio}
                     </h3>
-                    <p className="font-['Barlow'] text-[#53565A] text-sm leading-relaxed line-clamp-2 flex-1">
+                    <p className="font-['Montserrat'] text-[#53565A] text-sm leading-relaxed line-clamp-2 flex-1">
                       {svc.descripcion}
                     </p>
                     <div
                       className="flex items-center gap-1 mt-4 font-['Barlow_Condensed'] font-semibold text-xs tracking-widest uppercase"
-                      style={{ color: svc.color }}
+                      style={{ color: acentoDe(svc.color) }}
                     >
                       Ver servicio <ArrowRight size={12} />
                     </div>
