@@ -18,6 +18,11 @@ import { categorias } from "../data/categorias";
 import { servicios } from "../data/servicios";
 import { openWhatsApp } from "../utils/whatsapp";
 import { WhatsAppIcon } from "../components/WhatsAppIcon";
+import { NuevoSlider } from "../components/sliders/NuevoSlider";
+
+// Slider principal del inicio: true = nuevo slider (presentación de 8 slides),
+// false = slider anterior de categorías (se conserva como respaldo más abajo).
+const USAR_SLIDER_NUEVO = true;
 
 // Decorative graphic elements
 import starburst from "../../imports/02_starburst.png";
@@ -139,6 +144,12 @@ export default function Home() {
       <div className="h-screen min-h-[640px] flex flex-col pt-16">
 
         {/* ── Slider (90%) ── */}
+        {USAR_SLIDER_NUEVO ? (
+          <div className="relative flex-1 overflow-hidden">
+            <NuevoSlider />
+          </div>
+        ) : (
+        /* Respaldo: slider anterior de categorías. Para regresarlo, cambia USAR_SLIDER_NUEVO a false. */
         <div
           className="relative flex-1 overflow-hidden bg-black"
           onTouchStart={handleTouchStart}
@@ -269,6 +280,7 @@ export default function Home() {
             ))}
           </div>
         </div>
+        )}
 
         {/* ── Search bar (10%) ── */}
         <div className="h-[10vh] min-h-[64px] flex items-center px-6 md:px-10" style={{ backgroundColor: "#FF3EB5" }}>
