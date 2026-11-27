@@ -272,7 +272,7 @@ function SlideProyectos() {
 function SlideGranFormato() {
   return (
     <div className={`h-full w-full bg-white flex flex-col gap-4 lg:gap-6 ${pad}`}>
-      <Encabezado titulo="Gran formato" tag="Stands · Muros · Vinil" color={C.azul} subrayado="titulo" />
+      <Encabezado titulo="Proyectos" tag="Stands · Muros · Vinil" color={C.azul} subrayado="titulo" />
       <div className="flex-1 min-h-0 grid grid-cols-2 grid-rows-[1.3fr_1fr] gap-3 lg:gap-6">
         <div className="relative min-h-0 overflow-hidden">
           <img src={gfStand} alt="Stand de expo" className="w-full h-full object-contain object-left" />
