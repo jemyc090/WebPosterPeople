@@ -278,9 +278,12 @@ function SlideGranFormato() {
           <img src={gfStand} alt="Stand de expo" className="w-full h-full object-contain object-left" />
           <Etiqueta bg={C.amarillo} fg={C.texto}>Stand de expo</Etiqueta>
         </div>
-        <div className="relative min-h-0 overflow-hidden">
-          <img src={gfInstalacion} alt="Instalación en sitio" className="w-full h-full object-cover" />
-          <Etiqueta bg={C.rosa} fg="#fff">Instalación en sitio</Etiqueta>
+        <div className="relative min-h-0 flex justify-center">
+          {/* Foto vertical: caja 3:4 para que se vea completa la persona */}
+          <div className="relative h-full aspect-[4/5] max-w-full overflow-hidden">
+            <img src={gfInstalacion} alt="Instalación en sitio" className="w-full h-full object-cover object-[center_15%]" />
+            <Etiqueta bg={C.rosa} fg="#fff">Instalación en sitio</Etiqueta>
+          </div>
         </div>
         <div className="relative min-h-0 col-span-2 flex justify-center">
           <div className="relative h-full aspect-[1056/424] max-w-full">
