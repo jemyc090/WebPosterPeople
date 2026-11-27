@@ -60,7 +60,7 @@ const STATS = [
 const SERVICIOS = [
   { num: "01", nombre: "Merchandising", detalle: "", link: "/categorias/impresion/merchandising" },
   { num: "02", nombre: "Impresión", detalle: "pequeño, mediano y gran formato", link: "/categorias/impresion" },
-  { num: "03", nombre: "Material POP", detalle: "", link: "/servicios" },
+  { num: "03", nombre: "Material POP", detalle: "", link: "/categorias/material-pop-y-display" },
   { num: "04", nombre: "Logos volumétricos", detalle: "3D", link: "/servicios" },
   { num: "05", nombre: "Corte de vinil", detalle: "diseño e instalación", link: "/categorias/vinil-rotulacion/vinil-de-corte" },
   { num: "06", nombre: "Catering", detalle: "y box lunch", link: "/categorias/otros-servicios/catering" },

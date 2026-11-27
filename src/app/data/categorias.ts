@@ -27,11 +27,11 @@ export const categorias: Categoria[] = [
     icono: "🖨️",
   },
   {
-    slug: "gran-formato",
-    titulo: "Gran Formato",
-    subtitulo: "Impresión a gran escala para máximo impacto",
+    slug: "material-pop-y-display",
+    titulo: "Material POP y Display",
+    subtitulo: "Exhibe tu marca en eventos y puntos de venta",
     descripcion:
-      "Lonas, banners, roll ups e impresión en cama plana. Haz que tu marca sea visible a gran escala con impresión de alta resolución.",
+      "Banners, roll ups y stands para eventos, exposiciones y puntos de venta. Material POP y displays que hacen visible tu marca.",
     color: "#FA4616",
     imagenHero:
       "https://images.unsplash.com/photo-1693031630369-bd429a57f115?w=1400&h=800&fit=crop&auto=format",

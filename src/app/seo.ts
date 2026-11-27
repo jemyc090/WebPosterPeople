@@ -25,7 +25,7 @@ const BASE_KEYWORDS = [
 
 const CATEGORY_SEO_TITLE: Record<string, string> = {
   "impresion": "Impresión pequeño y mediano formato",
-  "gran-formato": "Impresión de gran formato",
+  "material-pop-y-display": "Material POP y display",
   "vinil-rotulacion": "Vinil y rotulación",
   "dtf-textil": "Impresión DTF textil",
   "dtf-uv": "Impresión DTF UV",
@@ -41,8 +41,8 @@ const CATEGORY_KEYWORDS: Record<string, string[]> = {
     "impresión en acrílico", "coroplast", "foamboard", "estireno", "PVC espumado",
     "photo frame", "figuras a contorno", "merchandising", "serigrafía", "sublimación",
   ],
-  "gran-formato": [
-    "impresión gran formato", "banners", "roll ups", "publicidad exterior", "displays para eventos",
+  "material-pop-y-display": [
+    "material POP", "displays", "stands para eventos", "stands para exposiciones", "banners", "roll ups", "publicidad exterior", "displays para eventos",
   ],
   "vinil-rotulacion": [
     "vinil", "rotulación", "vinil de corte", "vinil impreso", "vinil adherible",
@@ -84,6 +84,7 @@ const SERVICE_KEYWORDS: Record<string, string[]> = {
   "lonas": ["lonas", "lonas impresas", "impresión de lonas", "lonas publicitarias"],
   "banners": ["banners", "banners impresos", "banners para eventos"],
   "roll-ups": ["roll up", "roll ups", "porta banner", "displays roll up"],
+  "stand": ["stands", "stands para expos", "stands para ferias", "stands publicitarios", "stand a la medida"],
   "vinil-de-corte": ["corte de vinil", "vinil de corte", "letras de vinil", "rotulación con vinil"],
   "vinil-impreso": ["vinil impreso", "impresión en vinil", "calcomanías"],
   "vinil-adherible": ["vinil adherible", "stickers", "calcomanías personalizadas"],

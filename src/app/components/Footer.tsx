@@ -43,7 +43,7 @@ export function Footer() {
           <ul className="space-y-2">
             {[
               { label: "Impresión", slug: "impresion" },
-              { label: "Gran Formato", slug: "gran-formato" },
+              { label: "Material POP y Display", slug: "material-pop-y-display" },
               { label: "Vinil & Rotulación", slug: "vinil-rotulacion" },
               { label: "DTF Textil", slug: "dtf-textil" },
               { label: "DTF UV", slug: "dtf-uv" },

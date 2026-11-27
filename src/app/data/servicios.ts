@@ -485,7 +485,7 @@ const todosLosServicios: Servicio[] = [
       { type: "image", url: camaPlana12 },
     ],
   },
-  // ── GRAN FORMATO ───────────────────────────────────────────────────────────
+  // ── MATERIAL POP Y DISPLAY ───────────────────────────────────────────────────────────
   {
     orden: 9,
     path: "banners",
@@ -493,7 +493,7 @@ const todosLosServicios: Servicio[] = [
     descripcion:
       "Banners verticales y horizontales para eventos, tiendas, ferias y exposiciones. Impacto visual garantizado en cualquier espacio.",
     esEstrella: false,
-    categoriaSlug: "gran-formato",
+    categoriaSlug: "material-pop-y-display",
     subservicios: [
       "Diferentes tamaños estándar",
       "Con o sin estructura",
@@ -515,7 +515,7 @@ const todosLosServicios: Servicio[] = [
     descripcion:
       "Backings para eventos, conferencias y entrevistas. El fondo perfecto que refuerza tu imagen de marca en cada aparición.",
     esEstrella: false,
-    categoriaSlug: "gran-formato",
+    categoriaSlug: "material-pop-y-display",
     subservicios: [
       "Tela display de alta definición",
       "Con estructura desmontable",
@@ -534,7 +534,7 @@ const todosLosServicios: Servicio[] = [
     descripcion:
       "Roll ups retráctiles para stands, recepciones y puntos de venta. Portátiles, elegantes y reutilizables.",
     esEstrella: false,
-    categoriaSlug: "gran-formato",
+    categoriaSlug: "material-pop-y-display",
     subservicios: [
       "Tamaños 80×200 cm y 100×200 cm",
       "Estructura de aluminio incluida",
@@ -551,12 +551,29 @@ const todosLosServicios: Servicio[] = [
   },
   {
     orden: 12,
+    path: "stand",
+    tituloServicio: "Stand",
+    descripcion:
+      "Stands para exposiciones, ferias y eventos corporativos, diseñados y producidos a la medida de tu marca.",
+    esEstrella: false,
+    categoriaSlug: "material-pop-y-display",
+    subservicios: [
+    ],
+    imagenHero: "", // sin foto por ahora
+    color: "#FA4616",
+    icono: "🏬",
+    galeria: [
+      // Galería vacía por ahora (pendiente de fotos de stands)
+    ],
+  },
+  {
+    orden: 12,
     path: "microperforado",
     tituloServicio: "Microperforado",
     descripcion:
       "Vinil microperforado para ventanas y vitrinas. Visibilidad total desde afuera y privacidad desde adentro con impresión full color.",
     esEstrella: false,
-    categoriaSlug: "gran-formato",
+    categoriaSlug: "material-pop-y-display",
     subservicios: [
       "Visión 70/30 o 50/50",
       "Impresión full color exterior",
@@ -575,7 +592,7 @@ const todosLosServicios: Servicio[] = [
     descripcion:
       "Impresión en canvas para arte, fotografía y decoración. Textura única que da vida a tus imágenes con acabado de galería.",
     esEstrella: false,
-    categoriaSlug: "gran-formato",
+    categoriaSlug: "material-pop-y-display",
     subservicios: [
       "Tela canvas 100% algodón",
       "Con o sin bastidor",
@@ -594,7 +611,7 @@ const todosLosServicios: Servicio[] = [
     descripcion:
       "Papel tapiz personalizado para transformar cualquier espacio. Diseños únicos para oficinas, restaurantes, hoteles y hogares.",
     esEstrella: false,
-    categoriaSlug: "gran-formato",
+    categoriaSlug: "material-pop-y-display",
     subservicios: [
       "Material lavable y durable",
       "Instalación profesional disponible",

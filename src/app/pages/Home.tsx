@@ -45,7 +45,7 @@ import sliderGrabado from "../../imports/sliders/grabado-laser-slider.jpeg";
 
 const sliderImages: Record<string, string> = {
   "impresion": sliderImpresion,
-  "gran-formato": sliderGranFormato,
+  "material-pop-y-display": sliderGranFormato,
   "vinil-rotulacion": sliderVinil,
   "dtf-textil": sliderDtfTextil,
   "dtf-uv": sliderDtfUv,
