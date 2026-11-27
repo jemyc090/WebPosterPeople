@@ -153,10 +153,10 @@ export default function Home() {
                 className="absolute inset-0 transition-opacity duration-[1500ms] lg:bg-[var(--cat)]"
                 style={{ opacity: isActive ? 1 : 0, pointerEvents: isActive ? "auto" : "none", ["--cat" as string]: cat.color }}
               >
-                {/* Imagen alineada a la derecha: máx. 50% del ancho en desktop (lg),
+                {/* Imagen en la mitad derecha, pegada a la mitad del slider: máx. 50% del ancho en desktop (lg),
                     con padding y esquinas redondeadas; el fondo toma el color de la categoría.
                     En móvil ocupa todo el fondo. */}
-                <div className="absolute inset-0 lg:left-1/2 lg:flex lg:items-center lg:justify-end lg:py-12 lg:pr-12">
+                <div className="absolute inset-0 lg:left-1/2 lg:flex lg:items-center lg:justify-start lg:p-12">
                   <img
                     src={sliderImages[cat.slug] ?? cat.imagenHero}
                     alt={cat.titulo}
