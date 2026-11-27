@@ -9,6 +9,9 @@ import sublimacion1 from "../../imports/sublimacion/sublimacion-1.jpg";
 import senaletica1 from "../../imports/senaletica/senaletica-1.jpg";
 import senaletica2 from "../../imports/senaletica/senaletica-2.jpg";
 import lona1 from "../../imports/lonas/lona-1.jpg";
+import cvImg7 from "../../imports/corte-de-vinil/corte-de-vinil-7.jpg";
+import cvImg8 from "../../imports/corte-de-vinil/corte-de-vinil-8.jpg";
+import cvImg9 from "../../imports/corte-de-vinil/corte-de-vinil-9.jpg";
 import camaPlana1 from "../../imports/cama-plana/cama-plana-1.jpg";
 import camaPlana2 from "../../imports/cama-plana/cama-plana-2.jpg";
 import camaPlana3 from "../../imports/cama-plana/cama-plana-3.jpg";
@@ -678,6 +681,9 @@ const todosLosServicios: Servicio[] = [
       { type: "image", url: cvImg4 },
       { type: "image", url: cvImg5 },
       { type: "image", url: cvImg6 },
+      { type: "image", url: cvImg7 },
+      { type: "image", url: cvImg8 },
+      { type: "image", url: cvImg9 },
     ],
   },
   {
