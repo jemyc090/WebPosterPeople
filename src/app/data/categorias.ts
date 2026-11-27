@@ -45,7 +45,7 @@ export const categorias: Categoria[] = [
     subtitulo: "Tu marca en tercera dimensión",
     descripcion:
       "Logos y letras volumétricas en 3D para fachadas, recepciones y oficinas. Dale presencia y profundidad a tu marca.",
-    color: "#9A6B00",
+    color: "#eaded4",
     imagenHero: logoVolumetrico1,
     icono: "🔠",
   },
@@ -105,6 +105,17 @@ export const categorias: Categoria[] = [
     icono: "🔧",
   },
 ];
+
+/** true si el color es claro (el texto encima debe ir oscuro). */
+export const esColorClaro = (hex: string) => {
+  const h = hex.replace("#", "");
+  const [r, g, b] = [0, 2, 4].map((i) => parseInt(h.slice(i, i + 2), 16) / 255);
+  return 0.2126 * r + 0.7152 * g + 0.0722 * b > 0.6;
+};
+/** Color de texto sobre el color de la categoría. */
+export const textoSobre = (hex: string) => (esColorClaro(hex) ? "#13322B" : "#fff");
+/** Color para usar como acento sobre fondo blanco (texto, flechas). */
+export const acentoDe = (hex: string) => (esColorClaro(hex) ? "#13322B" : hex);
 
 export const getCategoriaBySlug = (slug: string) =>
   categorias.find((c) => c.slug === slug);

@@ -512,7 +512,7 @@ const todosLosServicios: Servicio[] = [
     subservicios: [
     ],
     imagenHero: logoVolumetrico1,
-    color: "#9A6B00",
+    color: "#eaded4",
     icono: "🔠",
     galeria: [
       { type: "image", url: logoVolumetrico1 },

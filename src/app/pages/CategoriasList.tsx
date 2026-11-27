@@ -1,7 +1,7 @@
 import { Link } from "react-router";
 import { motion } from "motion/react";
 import { ChevronRight, ArrowRight } from "lucide-react";
-import { categorias } from "../data/categorias";
+import { categorias, textoSobre } from "../data/categorias";
 import { servicios } from "../data/servicios";
 
 import starburst from "../../imports/02_starburst.png";
@@ -82,8 +82,8 @@ export default function CategoriasList() {
                       <div>
                         {/* Orden badge */}
                         <span
-                          className="inline-block font-['Barlow_Condensed'] font-black text-xs tracking-widest uppercase text-white px-3 py-1 rounded-full mb-4"
-                          style={{ backgroundColor: cat.color }}
+                          className="inline-block font-['Barlow_Condensed'] font-black text-xs tracking-widest uppercase px-3 py-1 rounded-full mb-4"
+                          style={{ backgroundColor: cat.color, color: textoSobre(cat.color) }}
                         >
                           {String(i + 1).padStart(2, "0")}
                         </span>
@@ -112,8 +112,8 @@ export default function CategoriasList() {
                           {count} servicio{count !== 1 ? "s" : ""}
                         </span>
                         <div
-                          className="w-10 h-10 rounded-full flex items-center justify-center text-white transition-transform duration-300 group-hover:scale-110 group-hover:translate-x-1"
-                          style={{ backgroundColor: cat.color }}
+                          className="w-10 h-10 rounded-full flex items-center justify-center transition-transform duration-300 group-hover:scale-110 group-hover:translate-x-1"
+                          style={{ backgroundColor: cat.color, color: textoSobre(cat.color) }}
                         >
                           <ArrowRight size={18} />
                         </div>
