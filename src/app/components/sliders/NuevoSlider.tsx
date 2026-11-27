@@ -171,10 +171,10 @@ function SlideTrayectoria() {
     <div className="relative h-full w-full bg-white flex flex-col">
       {/* Franja con el logo */}
       <div
-        className="shrink-0 h-[18%] min-h-[84px] max-h-[170px] flex items-center px-5 sm:px-8 lg:px-16 xl:px-20 border-b-4"
+        className="shrink-0 h-[22%] min-h-[100px] max-h-[200px] flex items-center justify-center px-5 sm:px-8 lg:px-16 xl:px-20 border-b-4"
         style={{ backgroundColor: "#154734", borderColor: C.naranja }}
       >
-        <img src={logoSitio} alt="Poster People" className="h-[72%] max-w-full object-contain object-left" />
+        <img src={logoSitio} alt="Poster People" className="h-[80%] max-w-full object-contain" />
       </div>
 
       <div className="relative flex-1 min-h-0 flex flex-col justify-center gap-8 lg:gap-12 px-5 sm:px-8 lg:px-16 xl:px-20 pt-4 pb-14 lg:pb-16">
