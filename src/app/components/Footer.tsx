@@ -44,6 +44,7 @@ export function Footer() {
             {[
               { label: "Impresión", slug: "impresion" },
               { label: "Material POP y Display", slug: "material-pop-y-display" },
+              { label: "Volumétricos", slug: "volumetricos" },
               { label: "Vinil & Rotulación", slug: "vinil-rotulacion" },
               { label: "DTF Textil", slug: "dtf-textil" },
               { label: "DTF UV", slug: "dtf-uv" },

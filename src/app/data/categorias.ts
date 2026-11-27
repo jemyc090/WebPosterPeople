@@ -1,3 +1,5 @@
+import logoVolumetrico1 from "../../imports/volumetricos/logo-volumetrico-1.jpg";
+
 export interface Categoria {
   slug: string;
   titulo: string;
@@ -36,6 +38,16 @@ export const categorias: Categoria[] = [
     imagenHero:
       "https://images.unsplash.com/photo-1693031630369-bd429a57f115?w=1400&h=800&fit=crop&auto=format",
     icono: "🏔️",
+  },
+  {
+    slug: "volumetricos",
+    titulo: "Volumétricos",
+    subtitulo: "Tu marca en tercera dimensión",
+    descripcion:
+      "Logos y letras volumétricas en 3D para fachadas, recepciones y oficinas. Dale presencia y profundidad a tu marca.",
+    color: "#9A6B00",
+    imagenHero: logoVolumetrico1,
+    icono: "🔠",
   },
   {
     slug: "vinil-rotulacion",

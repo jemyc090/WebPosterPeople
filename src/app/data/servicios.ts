@@ -12,6 +12,7 @@ import lona1 from "../../imports/lonas/lona-1.jpg";
 import cvImg7 from "../../imports/corte-de-vinil/corte-de-vinil-7.jpg";
 import cvImg8 from "../../imports/corte-de-vinil/corte-de-vinil-8.jpg";
 import cvImg9 from "../../imports/corte-de-vinil/corte-de-vinil-9.jpg";
+import logoVolumetrico1 from "../../imports/volumetricos/logo-volumetrico-1.jpg";
 import camaPlana1 from "../../imports/cama-plana/cama-plana-1.jpg";
 import camaPlana2 from "../../imports/cama-plana/cama-plana-2.jpg";
 import camaPlana3 from "../../imports/cama-plana/cama-plana-3.jpg";
@@ -497,6 +498,24 @@ const todosLosServicios: Servicio[] = [
       { type: "image", url: camaPlana2 },
       { type: "image", url: camaPlana12 },
       { type: "image", url: sublimacion1 },
+    ],
+  },
+  // ── VOLUMÉTRICOS ───────────────────────────────────────────────────────────
+  {
+    orden: 1,
+    path: "logos-volumetricos",
+    tituloServicio: "Logos volumétricos",
+    descripcion:
+      "Logos y letras volumétricas en 3D de acero, aluminio, acrílico y más, fabricados a la medida para fachadas, recepciones y oficinas.",
+    esEstrella: true,
+    categoriaSlug: "volumetricos",
+    subservicios: [
+    ],
+    imagenHero: logoVolumetrico1,
+    color: "#9A6B00",
+    icono: "🔠",
+    galeria: [
+      { type: "image", url: logoVolumetrico1 },
     ],
   },
   // ── MATERIAL POP Y DISPLAY ───────────────────────────────────────────────────────────

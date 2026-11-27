@@ -26,6 +26,7 @@ const BASE_KEYWORDS = [
 const CATEGORY_SEO_TITLE: Record<string, string> = {
   "impresion": "Impresión pequeño y mediano formato",
   "material-pop-y-display": "Material POP y display",
+  "volumetricos": "Logos y letras volumétricas",
   "vinil-rotulacion": "Vinil y rotulación",
   "dtf-textil": "Impresión DTF textil",
   "dtf-uv": "Impresión DTF UV",
@@ -43,6 +44,10 @@ const CATEGORY_KEYWORDS: Record<string, string[]> = {
   ],
   "material-pop-y-display": [
     "material POP", "displays", "muros publicitarios", "stands para eventos", "stands para exposiciones", "banners", "roll ups", "publicidad exterior", "displays para eventos",
+  ],
+  "volumetricos": [
+    "logos volumétricos", "letras volumétricas", "letras 3D", "logos 3D", "letreros 3D",
+    "letras de acero", "anuncios para fachada",
   ],
   "vinil-rotulacion": [
     "vinil", "rotulación", "vinil de corte", "vinil impreso", "vinil adherible",
@@ -84,6 +89,7 @@ const SERVICE_KEYWORDS: Record<string, string[]> = {
   "lonas": ["lonas", "lonas impresas", "impresión de lonas", "lonas publicitarias"],
   "banners": ["banners", "banners impresos", "banners para eventos"],
   "roll-ups": ["roll up", "roll ups", "porta banner", "displays roll up"],
+  "logos-volumetricos": ["logos volumétricos", "letras volumétricas", "logos 3D para recepción", "letras de acero inoxidable"],
   "muro": ["muro publicitario", "muro de prensa", "backing para eventos", "pop up display", "muro de tela"],
   "stand": ["stands", "stands para expos", "stands para ferias", "stands publicitarios", "stand a la medida"],
   "vinil-de-corte": ["corte de vinil", "vinil de corte", "letras de vinil", "rotulación con vinil"],
