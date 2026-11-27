@@ -238,7 +238,7 @@ export default function Servicios() {
                 <h2 className="font-['Barlow_Condensed'] font-black text-white text-2xl uppercase leading-none">
                   {categoriaActiva.titulo}
                 </h2>
-                <p className="font-['Barlow'] text-white/70 text-sm mt-0.5">{categoriaActiva.subtitulo}</p>
+                <p className="font-['Montserrat'] text-white/70 text-sm mt-0.5">{categoriaActiva.subtitulo}</p>
               </div>
             </div>
             <Link
@@ -294,7 +294,7 @@ export default function Servicios() {
                     <h3 className="font-['Barlow_Condensed'] font-black text-[#13322B] text-xl uppercase leading-tight mb-2">
                       {svc.tituloServicio}
                     </h3>
-                    <p className="font-['Barlow'] text-[#53565A] text-sm leading-relaxed line-clamp-2 flex-1">
+                    <p className="font-['Montserrat'] text-[#53565A] text-sm leading-relaxed line-clamp-2 flex-1">
                       {svc.descripcion}
                     </p>
                     <div

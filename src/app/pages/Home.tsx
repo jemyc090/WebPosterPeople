@@ -232,7 +232,7 @@ export default function Home() {
                               className="w-1.5 h-1.5 rounded-full shrink-0 bg-[var(--cat)] lg:bg-white"
                               style={{ ["--cat" as string]: cat.color }}
                             />
-                            <span className="font-['Barlow'] text-white/80 text-base">
+                            <span className="font-['Montserrat'] text-white/80 text-base">
                               {svc.tituloServicio}
                             </span>
                           </li>
@@ -293,7 +293,7 @@ export default function Home() {
                 onChange={(e) => { setSearchQuery(e.target.value); setShowResults(true); }}
                 onFocus={() => setShowResults(true)}
                 placeholder="¿Qué tienes en mente? Busca un servicio..."
-                className="flex-1 px-3 py-3 text-[#13322B] font-['Barlow'] placeholder-[#888B8D] focus:outline-none bg-transparent text-sm"
+                className="flex-1 px-3 py-3 text-[#13322B] font-['Montserrat'] placeholder-[#888B8D] focus:outline-none bg-transparent text-sm"
               />
               {searchQuery && (
                 <button onClick={() => { setSearchQuery(""); setShowResults(false); }} className="mr-4 text-[#888B8D] hover:text-[#13322B]">✕</button>
@@ -309,8 +309,8 @@ export default function Home() {
                   >
                     <span className="w-1 h-8 shrink-0 rounded-full" style={{ backgroundColor: svc.color }} />
                     <div>
-                      <div className="font-['Barlow'] font-semibold text-sm text-[#13322B] group-hover:text-[#009681] transition-colors">{svc.tituloServicio}</div>
-                      <div className="font-['Barlow'] text-xs text-[#888B8D]">{svc.subservicios[0]}</div>
+                      <div className="font-['Montserrat'] font-semibold text-sm text-[#13322B] group-hover:text-[#009681] transition-colors">{svc.tituloServicio}</div>
+                      <div className="font-['Montserrat'] text-xs text-[#888B8D]">{svc.subservicios[0]}</div>
                     </div>
                     <ChevronRight size={14} className="ml-auto text-[#888B8D]" />
                   </button>
@@ -354,7 +354,7 @@ export default function Home() {
                 <div className="p-6">
                   <div className="w-8 h-0.5 mb-4 rounded-full" style={{ backgroundColor: svc.color }} />
                   <h3 className="font-['Barlow_Condensed'] font-bold text-[#13322B] text-xl uppercase tracking-wide mb-2">{svc.tituloServicio}</h3>
-                  <p className="font-['Barlow'] text-[#53565A] text-sm leading-relaxed line-clamp-2">{svc.descripcion}</p>
+                  <p className="font-['Montserrat'] text-[#53565A] text-sm leading-relaxed line-clamp-2">{svc.descripcion}</p>
                   <div className="flex items-center gap-1 mt-4 font-['Barlow_Condensed'] font-semibold text-xs tracking-widest uppercase transition-colors group-hover:text-[#009681]" style={{ color: svc.color }}>
                     Ver servicio <ChevronRight size={14} />
                   </div>
@@ -403,7 +403,7 @@ export default function Home() {
                 ].map(({ num, label }) => (
                   <div key={label} className="border-l-2 border-[#009681] pl-4">
                     <div className="font-['Barlow_Condensed'] font-black text-4xl text-white">{num}</div>
-                    <div className="font-['Barlow'] text-white/50 text-sm mt-1">{label}</div>
+                    <div className="font-['Montserrat'] text-white/50 text-sm mt-1">{label}</div>
                   </div>
                 ))}
               </div>
@@ -419,10 +419,10 @@ export default function Home() {
               <br />
               tu marca
             </h2>
-            <p className="font-['Barlow'] text-white/70 text-base leading-relaxed">
+            <p className="font-['Montserrat'] text-white/70 text-base leading-relaxed">
               En Poster People somos especialistas en soluciones de merchandising e impresión que ayudan a las marcas a destacar y conectar con sus clientes. Combinamos creatividad, innovación y calidad para desarrollar productos personalizados que impulsan la identidad de cada negocio.
             </p>
-            <p className="font-['Barlow'] text-white/70 text-base leading-relaxed">
+            <p className="font-['Montserrat'] text-white/70 text-base leading-relaxed">
               Nuestro compromiso con la excelencia, la responsabilidad y la atención personalizada nos convierte en un aliado estratégico para empresas que buscan proyectar su marca con soluciones visuales de alto impacto.
             </p>
             <button
@@ -457,11 +457,11 @@ export default function Home() {
             {faqs.map((faq, i) => (
               <div key={i} className={`border rounded-2xl transition-all duration-200 ${openFaq === i ? "border-[#009681] shadow-md" : "border-[#ECEAE4] hover:border-[#B1B3B3]"}`}>
                 <button className="w-full flex items-center justify-between gap-4 px-6 py-5 text-left" onClick={() => setOpenFaq(openFaq === i ? null : i)}>
-                  <span className="font-['Barlow'] font-semibold text-[#13322B] text-base">{faq.question}</span>
+                  <span className="font-['Montserrat'] font-semibold text-[#13322B] text-base">{faq.question}</span>
                   <ChevronDown size={20} className={`shrink-0 text-[#009681] transition-transform duration-300 ${openFaq === i ? "rotate-180" : ""}`} />
                 </button>
                 <div className={`overflow-hidden transition-all duration-300 ${openFaq === i ? "max-h-48" : "max-h-0"}`}>
-                  <p className="px-6 pb-5 font-['Barlow'] text-[#53565A] text-sm leading-relaxed border-t border-[#ECEAE4] pt-4">{faq.answer}</p>
+                  <p className="px-6 pb-5 font-['Montserrat'] text-[#53565A] text-sm leading-relaxed border-t border-[#ECEAE4] pt-4">{faq.answer}</p>
                 </div>
               </div>
             ))}
@@ -488,7 +488,7 @@ export default function Home() {
               {formSent ? (
                 <div className="bg-[#009681] text-white p-6 text-center rounded-2xl">
                   <div className="font-['Barlow_Condensed'] font-bold text-2xl uppercase mb-2">¡Mensaje enviado!</div>
-                  <p className="font-['Barlow'] text-sm text-white/80">Nos pondremos en contacto contigo muy pronto.</p>
+                  <p className="font-['Montserrat'] text-sm text-white/80">Nos pondremos en contacto contigo muy pronto.</p>
                 </div>
               ) : (
                 <form onSubmit={handleFormSubmit} className="space-y-5">
@@ -498,20 +498,20 @@ export default function Home() {
                     { name: "telefono", label: "Teléfono", type: "tel", placeholder: "+52 55 1234 5678" },
                   ].map(({ name, label, type, placeholder }) => (
                     <div key={name}>
-                      <label className="font-['Barlow'] font-semibold text-xs tracking-widest uppercase text-[#53565A] block mb-1.5">{label}</label>
+                      <label className="font-['Montserrat'] font-semibold text-xs tracking-widest uppercase text-[#53565A] block mb-1.5">{label}</label>
                       <input type={type} placeholder={placeholder} required
                         value={formData[name as keyof typeof formData]}
                         onChange={(e) => setFormData((f) => ({ ...f, [name]: e.target.value }))}
-                        className="w-full border border-[#ECEAE4] px-4 py-3 rounded-xl font-['Barlow'] text-sm text-[#13322B] placeholder-[#B1B3B3] focus:outline-none focus:border-[#009681] transition-colors bg-[#F7F5F0]"
+                        className="w-full border border-[#ECEAE4] px-4 py-3 rounded-xl font-['Montserrat'] text-sm text-[#13322B] placeholder-[#B1B3B3] focus:outline-none focus:border-[#009681] transition-colors bg-[#F7F5F0]"
                       />
                     </div>
                   ))}
                   <div>
-                    <label className="font-['Barlow'] font-semibold text-xs tracking-widest uppercase text-[#53565A] block mb-1.5">Mensaje</label>
+                    <label className="font-['Montserrat'] font-semibold text-xs tracking-widest uppercase text-[#53565A] block mb-1.5">Mensaje</label>
                     <textarea placeholder="Cuéntanos sobre tu proyecto..." rows={4} required
                       value={formData.mensaje}
                       onChange={(e) => setFormData((f) => ({ ...f, mensaje: e.target.value }))}
-                      className="w-full border border-[#ECEAE4] px-4 py-3 rounded-xl font-['Barlow'] text-sm text-[#13322B] placeholder-[#B1B3B3] focus:outline-none focus:border-[#009681] transition-colors bg-[#F7F5F0] resize-none"
+                      className="w-full border border-[#ECEAE4] px-4 py-3 rounded-xl font-['Montserrat'] text-sm text-[#13322B] placeholder-[#B1B3B3] focus:outline-none focus:border-[#009681] transition-colors bg-[#F7F5F0] resize-none"
                     />
                   </div>
                   <button type="submit"
@@ -539,15 +539,15 @@ export default function Home() {
                         <Icon size={18} className="text-white" />
                       </div>
                       <div>
-                        <div className="font-['Barlow'] text-xs text-white/40 uppercase tracking-widest">{label}</div>
-                        <div className="font-['Barlow'] font-medium text-white group-hover:text-[#009681] transition-colors text-sm">{value}</div>
+                        <div className="font-['Montserrat'] text-xs text-white/40 uppercase tracking-widest">{label}</div>
+                        <div className="font-['Montserrat'] font-medium text-white group-hover:text-[#009681] transition-colors text-sm">{value}</div>
                       </div>
                     </a>
                   ))}
                 </div>
               </div>
               <div className="mt-10">
-                <p className="font-['Barlow'] text-xs text-white/40 uppercase tracking-widest mb-4">Síguenos</p>
+                <p className="font-['Montserrat'] text-xs text-white/40 uppercase tracking-widest mb-4">Síguenos</p>
                 <div className="flex gap-3">
                   {[
                     { icon: Instagram, label: "Instagram", href: "#" },

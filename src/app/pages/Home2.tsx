@@ -193,7 +193,7 @@ export default function Home2() {
                         {svcs.map((svc) => (
                           <li key={svc.path} className="flex items-center gap-3">
                             <span className="w-1.5 h-1.5 rounded-full shrink-0" style={{ backgroundColor: cat.color }} />
-                            <span className="font-['Barlow'] text-white/80 text-base">{svc.tituloServicio}</span>
+                            <span className="font-['Montserrat'] text-white/80 text-base">{svc.tituloServicio}</span>
                           </li>
                         ))}
                       </ul>
@@ -236,7 +236,7 @@ export default function Home2() {
                 onChange={(e) => { setSearchQuery(e.target.value); setShowResults(true); }}
                 onFocus={() => setShowResults(true)}
                 placeholder="¿Qué tienes en mente? Busca un servicio..."
-                className="flex-1 px-3 py-3 text-[#13322B] font-['Barlow'] placeholder-[#888B8D] focus:outline-none bg-transparent text-sm"
+                className="flex-1 px-3 py-3 text-[#13322B] font-['Montserrat'] placeholder-[#888B8D] focus:outline-none bg-transparent text-sm"
               />
               {searchQuery && (
                 <button onClick={() => { setSearchQuery(""); setShowResults(false); }} className="mr-4 text-[#888B8D] hover:text-[#13322B]">✕</button>
@@ -249,8 +249,8 @@ export default function Home2() {
                     className="w-full flex items-center gap-3 px-4 py-3 hover:bg-[#F7F5F0] transition-colors text-left group">
                     <span className="w-1 h-8 shrink-0 rounded-full" style={{ backgroundColor: svc.color }} />
                     <div>
-                      <div className="font-['Barlow'] font-semibold text-sm text-[#13322B] group-hover:text-[#009681] transition-colors">{svc.tituloServicio}</div>
-                      <div className="font-['Barlow'] text-xs text-[#888B8D]">{svc.subservicios[0]}</div>
+                      <div className="font-['Montserrat'] font-semibold text-sm text-[#13322B] group-hover:text-[#009681] transition-colors">{svc.tituloServicio}</div>
+                      <div className="font-['Montserrat'] text-xs text-[#888B8D]">{svc.subservicios[0]}</div>
                     </div>
                     <ChevronRight size={14} className="ml-auto text-[#888B8D]" />
                   </button>
@@ -268,7 +268,7 @@ export default function Home2() {
           {/* Statement row */}
           <div className="flex flex-col lg:flex-row items-start lg:items-center gap-10 mb-16">
             <div className="flex-1">
-              <h2 className="font-['Barlow'] font-black text-[#13322B] text-4xl md:text-5xl lg:text-[3.8rem] leading-[1.1]">
+              <h2 className="font-['Montserrat'] font-black text-[#13322B] text-4xl md:text-5xl lg:text-[3.8rem] leading-[1.1]">
                 Lo diseñamos, lo<br />
                 producimos, lo<br />
                 <span style={{ color: "#FF3EB5" }}>instalamos.</span>
@@ -291,10 +291,10 @@ export default function Home2() {
             ].map((stat) => (
               <div key={stat.label} className="pt-8 pb-4 px-0 first:pr-8 [&:nth-child(2)]:px-8 last:pl-8">
                 <div className="h-0.5 w-full mb-6" style={{ backgroundColor: stat.line }} />
-                <div className="font-['Barlow'] font-black text-[#13322B] text-4xl md:text-5xl lg:text-6xl leading-none mb-2">
+                <div className="font-['Montserrat'] font-black text-[#13322B] text-4xl md:text-5xl lg:text-6xl leading-none mb-2">
                   {stat.num}
                 </div>
-                <div className="font-['Barlow'] font-bold text-[#13322B] text-[10px] md:text-xs tracking-[0.2em] uppercase">
+                <div className="font-['Montserrat'] font-bold text-[#13322B] text-[10px] md:text-xs tracking-[0.2em] uppercase">
                   {stat.label}
                 </div>
               </div>
@@ -307,19 +307,19 @@ export default function Home2() {
       <section className="bg-white py-16 px-6 border-t border-[#E5E7EB]">
         <div className="max-w-7xl mx-auto">
           <div className="border-b-2 border-[#13322B] pb-5 mb-0">
-            <h2 className="font-['Barlow'] font-black text-[#13322B] text-4xl md:text-5xl">Servicios</h2>
+            <h2 className="font-['Montserrat'] font-black text-[#13322B] text-4xl md:text-5xl">Servicios</h2>
           </div>
           <div>
             {mainServices.map((svc) => (
               <div key={svc.num} className="flex items-center gap-5 py-5 border-b border-[#E5E7EB]">
-                <span className="font-['Barlow'] font-bold text-xs md:text-sm w-6 shrink-0" style={{ color: "#FF3EB5" }}>
+                <span className="font-['Montserrat'] font-bold text-xs md:text-sm w-6 shrink-0" style={{ color: "#FF3EB5" }}>
                   {svc.num}
                 </span>
-                <span className="font-['Barlow'] font-bold text-[#13322B] text-2xl md:text-3xl lg:text-[2rem] flex-1 leading-tight">
+                <span className="font-['Montserrat'] font-bold text-[#13322B] text-2xl md:text-3xl lg:text-[2rem] flex-1 leading-tight">
                   {svc.name}
                 </span>
                 {svc.tag && (
-                  <span className="font-['Barlow'] text-[#888B8D] text-sm hidden sm:block shrink-0">
+                  <span className="font-['Montserrat'] text-[#888B8D] text-sm hidden sm:block shrink-0">
                     {svc.tag}
                   </span>
                 )}
@@ -334,10 +334,10 @@ export default function Home2() {
         <div className="max-w-7xl mx-auto">
           <div className="flex items-end justify-between mb-6">
             <div>
-              <h2 className="font-['Barlow'] font-black text-[#13322B] text-4xl md:text-5xl">Proyectos</h2>
+              <h2 className="font-['Montserrat'] font-black text-[#13322B] text-4xl md:text-5xl">Proyectos</h2>
               <div className="h-0.5 mt-2" style={{ backgroundColor: "#FF3EB5", width: "100%" }} />
             </div>
-            <span className="font-['Barlow'] font-bold text-xs tracking-[0.18em] uppercase mb-0.5 shrink-0 ml-6" style={{ color: "#FF3EB5" }}>
+            <span className="font-['Montserrat'] font-bold text-xs tracking-[0.18em] uppercase mb-0.5 shrink-0 ml-6" style={{ color: "#FF3EB5" }}>
               KITS Y PROMOCIONALES
             </span>
           </div>
@@ -356,7 +356,7 @@ export default function Home2() {
                 <img src={proj.img} alt={proj.client} className="w-full h-full object-cover" />
                 <div className="absolute inset-0 bg-black/20" />
                 <div className="absolute bottom-4 left-4">
-                  <span className="font-['Barlow'] font-black text-white text-xs tracking-widest uppercase px-3 py-1.5"
+                  <span className="font-['Montserrat'] font-black text-white text-xs tracking-widest uppercase px-3 py-1.5"
                     style={{ backgroundColor: proj.color }}>
                     {proj.client}
                   </span>
@@ -372,7 +372,7 @@ export default function Home2() {
                 <img src={proj.img} alt={proj.client} className="w-full h-full object-cover" />
                 <div className="absolute inset-0 bg-black/20" />
                 <div className="absolute bottom-3 left-3">
-                  <span className="font-['Barlow'] font-black text-white text-[10px] tracking-widest uppercase px-2 py-1"
+                  <span className="font-['Montserrat'] font-black text-white text-[10px] tracking-widest uppercase px-2 py-1"
                     style={{ backgroundColor: proj.color }}>
                     {proj.client}
                   </span>
@@ -389,13 +389,13 @@ export default function Home2() {
           <div className="flex items-end justify-between mb-6">
             <div>
               <h2
-                className="font-['Barlow'] font-black text-[#13322B] text-4xl md:text-5xl pb-1"
+                className="font-['Montserrat'] font-black text-[#13322B] text-4xl md:text-5xl pb-1"
                 style={{ borderBottom: "3px solid #307FE2", display: "inline-block" }}
               >
                 Gran formato
               </h2>
             </div>
-            <span className="font-['Barlow'] font-bold text-xs tracking-[0.18em] uppercase mb-1 shrink-0 ml-6" style={{ color: "#307FE2" }}>
+            <span className="font-['Montserrat'] font-bold text-xs tracking-[0.18em] uppercase mb-1 shrink-0 ml-6" style={{ color: "#307FE2" }}>
               STANDS · MUROS · VINIL
             </span>
           </div>
@@ -407,7 +407,7 @@ export default function Home2() {
                 <img src={proj.img} alt={proj.label} className="w-full h-full object-cover" />
                 <div className="absolute inset-0 bg-black/15" />
                 <div className="absolute bottom-4 left-4">
-                  <span className="font-['Barlow'] font-black text-white text-xs tracking-widest uppercase px-3 py-1.5"
+                  <span className="font-['Montserrat'] font-black text-white text-xs tracking-widest uppercase px-3 py-1.5"
                     style={{ backgroundColor: proj.color }}>
                     {proj.label}
                   </span>
@@ -421,7 +421,7 @@ export default function Home2() {
             <img src={granFormatoProjects[2].img} alt={granFormatoProjects[2].label} className="w-full h-full object-cover" />
             <div className="absolute inset-0 bg-black/15" />
             <div className="absolute bottom-4 left-4">
-              <span className="font-['Barlow'] font-black text-white text-xs tracking-widest uppercase px-3 py-1.5"
+              <span className="font-['Montserrat'] font-black text-white text-xs tracking-widest uppercase px-3 py-1.5"
                 style={{ backgroundColor: granFormatoProjects[2].color }}>
                 {granFormatoProjects[2].label}
               </span>
@@ -434,8 +434,8 @@ export default function Home2() {
       <section className="py-16 px-6" style={{ backgroundColor: "#F5C800" }}>
         <div className="max-w-7xl mx-auto">
           <div className="flex items-center justify-between border-b border-[#13322B]/25 pb-5 mb-0">
-            <h2 className="font-['Barlow'] font-black text-[#13322B] text-3xl md:text-4xl">Valores y compromiso</h2>
-            <span className="font-['Barlow'] font-bold text-xs tracking-[0.2em] uppercase text-[#13322B]/50 shrink-0 ml-6">
+            <h2 className="font-['Montserrat'] font-black text-[#13322B] text-3xl md:text-4xl">Valores y compromiso</h2>
+            <span className="font-['Montserrat'] font-bold text-xs tracking-[0.2em] uppercase text-[#13322B]/50 shrink-0 ml-6">
               ASÍ TRABAJAMOS
             </span>
           </div>
@@ -452,12 +452,12 @@ export default function Home2() {
                 ].join(" ")}
               >
                 <h3
-                  className="font-['Barlow'] font-black text-4xl md:text-5xl lg:text-6xl mb-3"
+                  className="font-['Montserrat'] font-black text-4xl md:text-5xl lg:text-6xl mb-3"
                   style={{ color: v.pink ? "#FF3EB5" : "#13322B" }}
                 >
                   {v.title}
                 </h3>
-                <p className="font-['Barlow'] font-bold text-[#13322B] text-base md:text-lg">{v.desc}</p>
+                <p className="font-['Montserrat'] font-bold text-[#13322B] text-base md:text-lg">{v.desc}</p>
               </div>
             ))}
           </div>
@@ -467,7 +467,7 @@ export default function Home2() {
             {valorTags.map((tag) => (
               <span
                 key={tag.label}
-                className="font-['Barlow'] font-black text-white text-[10px] md:text-xs tracking-[0.15em] uppercase px-4 py-2"
+                className="font-['Montserrat'] font-black text-white text-[10px] md:text-xs tracking-[0.15em] uppercase px-4 py-2"
                 style={{ backgroundColor: tag.bg }}
               >
                 {tag.label}
@@ -481,8 +481,8 @@ export default function Home2() {
       <section className="bg-white py-16 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="flex items-baseline justify-between border-b border-[#E5E7EB] pb-5 mb-8">
-            <h2 className="font-['Barlow'] font-black text-[#13322B] text-4xl md:text-5xl">Clientes</h2>
-            <span className="font-['Barlow'] font-bold text-xs tracking-[0.2em] uppercase shrink-0 ml-6" style={{ color: "#FF3EB5" }}>
+            <h2 className="font-['Montserrat'] font-black text-[#13322B] text-4xl md:text-5xl">Clientes</h2>
+            <span className="font-['Montserrat'] font-bold text-xs tracking-[0.2em] uppercase shrink-0 ml-6" style={{ color: "#FF3EB5" }}>
               +20 MARCAS ATENDIDAS
             </span>
           </div>
@@ -495,7 +495,7 @@ export default function Home2() {
                     key={name}
                     className={`flex items-center justify-center px-4 py-8 ${ci > 0 ? "border-l border-[#E5E7EB]" : ""}`}
                   >
-                    <span className="font-['Barlow'] font-black text-[#13322B] text-center text-sm md:text-base leading-tight">
+                    <span className="font-['Montserrat'] font-black text-[#13322B] text-center text-sm md:text-base leading-tight">
                       {name}
                     </span>
                   </div>
@@ -529,7 +529,7 @@ export default function Home2() {
               {formSent ? (
                 <div className="bg-[#009681] text-white p-6 text-center rounded-2xl">
                   <div className="font-['Barlow_Condensed'] font-bold text-2xl uppercase mb-2">¡Mensaje enviado!</div>
-                  <p className="font-['Barlow'] text-sm text-white/80">Nos pondremos en contacto contigo muy pronto.</p>
+                  <p className="font-['Montserrat'] text-sm text-white/80">Nos pondremos en contacto contigo muy pronto.</p>
                 </div>
               ) : (
                 <form onSubmit={handleFormSubmit} className="space-y-5">
@@ -539,20 +539,20 @@ export default function Home2() {
                     { name: "telefono", label: "Teléfono",             type: "tel",   placeholder: "+52 55 1234 5678" },
                   ].map(({ name, label, type, placeholder }) => (
                     <div key={name}>
-                      <label className="font-['Barlow'] font-semibold text-xs tracking-widest uppercase text-[#53565A] block mb-1.5">{label}</label>
+                      <label className="font-['Montserrat'] font-semibold text-xs tracking-widest uppercase text-[#53565A] block mb-1.5">{label}</label>
                       <input type={type} placeholder={placeholder} required
                         value={formData[name as keyof typeof formData]}
                         onChange={(e) => setFormData((f) => ({ ...f, [name]: e.target.value }))}
-                        className="w-full border border-[#ECEAE4] px-4 py-3 rounded-xl font-['Barlow'] text-sm text-[#13322B] placeholder-[#B1B3B3] focus:outline-none focus:border-[#009681] transition-colors bg-[#F7F5F0]"
+                        className="w-full border border-[#ECEAE4] px-4 py-3 rounded-xl font-['Montserrat'] text-sm text-[#13322B] placeholder-[#B1B3B3] focus:outline-none focus:border-[#009681] transition-colors bg-[#F7F5F0]"
                       />
                     </div>
                   ))}
                   <div>
-                    <label className="font-['Barlow'] font-semibold text-xs tracking-widest uppercase text-[#53565A] block mb-1.5">Mensaje</label>
+                    <label className="font-['Montserrat'] font-semibold text-xs tracking-widest uppercase text-[#53565A] block mb-1.5">Mensaje</label>
                     <textarea placeholder="Cuéntanos sobre tu proyecto..." rows={4} required
                       value={formData.mensaje}
                       onChange={(e) => setFormData((f) => ({ ...f, mensaje: e.target.value }))}
-                      className="w-full border border-[#ECEAE4] px-4 py-3 rounded-xl font-['Barlow'] text-sm text-[#13322B] placeholder-[#B1B3B3] focus:outline-none focus:border-[#009681] transition-colors bg-[#F7F5F0] resize-none"
+                      className="w-full border border-[#ECEAE4] px-4 py-3 rounded-xl font-['Montserrat'] text-sm text-[#13322B] placeholder-[#B1B3B3] focus:outline-none focus:border-[#009681] transition-colors bg-[#F7F5F0] resize-none"
                     />
                   </div>
                   <button type="submit"
@@ -584,15 +584,15 @@ export default function Home2() {
                         <Icon size={18} className="text-white" />
                       </div>
                       <div>
-                        <div className="font-['Barlow'] text-xs text-white/40 uppercase tracking-widest">{label}</div>
-                        <div className="font-['Barlow'] font-medium text-white group-hover:text-[#009681] transition-colors text-sm">{value}</div>
+                        <div className="font-['Montserrat'] text-xs text-white/40 uppercase tracking-widest">{label}</div>
+                        <div className="font-['Montserrat'] font-medium text-white group-hover:text-[#009681] transition-colors text-sm">{value}</div>
                       </div>
                     </a>
                   ))}
                 </div>
               </div>
               <div className="mt-10">
-                <p className="font-['Barlow'] text-xs text-white/40 uppercase tracking-widest mb-4">Síguenos</p>
+                <p className="font-['Montserrat'] text-xs text-white/40 uppercase tracking-widest mb-4">Síguenos</p>
                 <div className="flex gap-3">
                   {[
                     { icon: Instagram, label: "Instagram", href: "#" },

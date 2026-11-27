@@ -34,7 +34,7 @@ export default function CategoriasList() {
               Categorías
             </span>
           </h1>
-          <p className="font-['Barlow'] text-white/60 text-base max-w-xl leading-relaxed">
+          <p className="font-['Montserrat'] text-white/60 text-base max-w-xl leading-relaxed">
             Selecciona una categoría para explorar todos los servicios y productos disponibles.
           </p>
         </div>
@@ -90,7 +90,7 @@ export default function CategoriasList() {
                         <h2 className="font-['Barlow_Condensed'] font-black text-[#13322B] text-4xl lg:text-5xl uppercase leading-none group-hover:text-[#13322B] transition-colors mb-1">
                           {cat.titulo}
                         </h2>
-                        <p className="font-['Barlow'] text-[#53565A] text-sm">
+                        <p className="font-['Montserrat'] text-[#53565A] text-sm">
                           {cat.subtitulo}
                         </p>
                       </div>
@@ -104,7 +104,7 @@ export default function CategoriasList() {
                     </div>
 
                     <div className="flex items-end justify-between mt-6">
-                      <p className="font-['Barlow'] text-[#888B8D] text-sm leading-relaxed max-w-sm">
+                      <p className="font-['Montserrat'] text-[#888B8D] text-sm leading-relaxed max-w-sm">
                         {cat.descripcion}
                       </p>
                       <div className="flex items-center gap-4 ml-6 shrink-0">
@@ -135,7 +135,7 @@ export default function CategoriasList() {
           <h2 className="font-['Barlow_Condensed'] font-black text-white text-4xl lg:text-5xl uppercase mb-4">
             ¿No encuentras lo que buscas?
           </h2>
-          <p className="font-['Barlow'] text-white/60 text-base mb-8">
+          <p className="font-['Montserrat'] text-white/60 text-base mb-8">
             Cuéntanos tu idea y encontramos la solución ideal para tu proyecto.
           </p>
           <Link

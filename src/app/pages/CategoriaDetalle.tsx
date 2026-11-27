@@ -128,7 +128,7 @@ function GalleryLightbox({
       {/* Caption */}
       {item.caption && (
         <div className="text-center py-3 shrink-0">
-          <p className="font-['Barlow'] text-white/60 text-sm">{item.caption}</p>
+          <p className="font-['Montserrat'] text-white/60 text-sm">{item.caption}</p>
         </div>
       )}
 
@@ -416,7 +416,7 @@ export default function CategoriaDetalle() {
               <h1 className="font-['Barlow_Condensed'] font-black text-white text-5xl md:text-7xl uppercase leading-none">
                 {categoria.titulo}
               </h1>
-              <p className="font-['Barlow'] text-white/70 text-base mt-2 max-w-lg">
+              <p className="font-['Montserrat'] text-white/70 text-base mt-2 max-w-lg">
                 {categoria.subtitulo}
               </p>
             </div>
@@ -478,7 +478,7 @@ export default function CategoriaDetalle() {
                   <p className="font-['Barlow_Condensed'] font-black text-[#13322B] text-sm uppercase leading-tight line-clamp-2">
                     {svc.tituloServicio}
                   </p>
-                  <p className="font-['Barlow'] text-[#888B8D] text-xs leading-snug line-clamp-2 flex-1">
+                  <p className="font-['Montserrat'] text-[#888B8D] text-xs leading-snug line-clamp-2 flex-1">
                     {svc.descripcion}
                   </p>
                   <span
@@ -519,7 +519,7 @@ export default function CategoriaDetalle() {
 
                 <div className="w-10 h-1 rounded-full mb-4" style={{ backgroundColor: categoria.color }} />
 
-                <p className="font-['Barlow'] text-[#53565A] text-base leading-relaxed">
+                <p className="font-['Montserrat'] text-[#53565A] text-base leading-relaxed">
                   {activeService.descripcion}
                 </p>
               </div>
@@ -534,7 +534,7 @@ export default function CategoriaDetalle() {
                   {activeService.subservicios.map((sub, i) => (
                     <span
                       key={i}
-                      className="font-['Barlow'] text-xs text-[#53565A] bg-[#F7F5F0] border border-[#ECEAE4] px-3 py-1.5 rounded-full"
+                      className="font-['Montserrat'] text-xs text-[#53565A] bg-[#F7F5F0] border border-[#ECEAE4] px-3 py-1.5 rounded-full"
                     >
                       {sub}
                     </span>
@@ -617,7 +617,7 @@ export default function CategoriaDetalle() {
                       </button>
                     </>
                   )}
-                  <div className="absolute bottom-3 left-3 bg-black/40 text-white font-['Barlow'] text-xs px-2.5 py-1 rounded-full z-10">
+                  <div className="absolute bottom-3 left-3 bg-black/40 text-white font-['Montserrat'] text-xs px-2.5 py-1 rounded-full z-10">
                     {activeImageIndex + 1} / {galeria.length}
                   </div>
                 </div>
@@ -658,7 +658,7 @@ export default function CategoriaDetalle() {
           </motion.div>
         ) : activeServicePath !== "todos" && (
           <div className="flex items-center justify-center h-64">
-            <p className="font-['Barlow'] text-[#888B8D]">Selecciona un servicio</p>
+            <p className="font-['Montserrat'] text-[#888B8D]">Selecciona un servicio</p>
           </div>
         )}
       </div>
