@@ -396,7 +396,7 @@ export default function Home() {
               <div className="w-16 h-1 bg-[#FA4616] rounded-full mb-8" />
               <div className="grid grid-cols-2 gap-6">
                 {[
-                  { num: "25+", label: "Años de experiencia" },
+                  { num: "28", label: "Años de experiencia" },
                   { num: "500+", label: "Clientes satisfechos" },
                   { num: "9", label: "Líneas de servicio" },
                   { num: "100%", label: "Compromiso con calidad" },
