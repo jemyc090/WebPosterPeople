@@ -150,16 +150,17 @@ export default function Home() {
             return (
               <div
                 key={cat.slug}
-                className="absolute inset-0 transition-opacity duration-[1500ms]"
-                style={{ opacity: isActive ? 1 : 0, pointerEvents: isActive ? "auto" : "none" }}
+                className="absolute inset-0 transition-opacity duration-[1500ms] lg:bg-[var(--cat)]"
+                style={{ opacity: isActive ? 1 : 0, pointerEvents: isActive ? "auto" : "none", ["--cat" as string]: cat.color }}
               >
                 {/* Imagen alineada a la derecha: máx. 50% del ancho en desktop (lg),
-                    el resto queda en fondo negro. En móvil ocupa todo el fondo. */}
-                <div className="absolute inset-0 lg:left-1/2">
+                    con padding y esquinas redondeadas; el fondo toma el color de la categoría.
+                    En móvil ocupa todo el fondo. */}
+                <div className="absolute inset-0 lg:left-1/2 lg:flex lg:items-center lg:justify-end lg:py-12 lg:pr-12">
                   <img
                     src={sliderImages[cat.slug] ?? cat.imagenHero}
                     alt={cat.titulo}
-                    className="w-full h-full object-cover lg:object-contain lg:object-right"
+                    className="w-full h-full object-cover lg:w-auto lg:h-auto lg:max-w-full lg:max-h-full lg:object-contain lg:rounded-3xl lg:shadow-2xl"
                   />
                 </div>
                 {/* Overlay oscuro solo en móvil/tablet, donde el texto va encima de la imagen */}
@@ -200,8 +201,8 @@ export default function Home() {
                     >
                       {/* Category badge */}
                       <span
-                        className="inline-flex items-center gap-2 font-['Barlow_Condensed'] font-bold text-xs tracking-[0.25em] uppercase text-white px-3 py-1.5 rounded-full mb-5"
-                        style={{ backgroundColor: cat.color }}
+                        className="inline-flex items-center gap-2 font-['Barlow_Condensed'] font-bold text-xs tracking-[0.25em] uppercase text-white px-3 py-1.5 rounded-full mb-5 bg-[var(--cat)] lg:bg-black/25"
+                        style={{ ["--cat" as string]: cat.color }}
                       >
                         <span>{cat.icono}</span>
                         {cat.subtitulo}
@@ -217,8 +218,8 @@ export default function Home() {
                         {svcs.map((svc) => (
                           <li key={svc.path} className="flex items-center gap-3">
                             <span
-                              className="w-1.5 h-1.5 rounded-full shrink-0"
-                              style={{ backgroundColor: cat.color }}
+                              className="w-1.5 h-1.5 rounded-full shrink-0 bg-[var(--cat)] lg:bg-white"
+                              style={{ ["--cat" as string]: cat.color }}
                             />
                             <span className="font-['Barlow'] text-white/80 text-base">
                               {svc.tituloServicio}
@@ -231,8 +232,8 @@ export default function Home() {
                       <div className="flex flex-wrap gap-3">
                         <Link
                           to={`/categorias/${cat.slug}`}
-                          className="inline-flex items-center gap-2 text-white font-['Barlow_Condensed'] font-bold text-sm tracking-[0.15em] uppercase px-6 py-3 rounded-full transition-all hover:brightness-110 active:scale-95"
-                          style={{ backgroundColor: cat.color }}
+                          className="inline-flex items-center gap-2 text-white bg-[var(--cat)] lg:bg-white lg:text-black font-['Barlow_Condensed'] font-bold text-sm tracking-[0.15em] uppercase px-6 py-3 rounded-full transition-all hover:brightness-110 active:scale-95"
+                          style={{ ["--cat" as string]: cat.color }}
                         >
                           Ver más <ArrowRight size={16} />
                         </Link>
@@ -257,11 +258,11 @@ export default function Home() {
               <button
                 key={i}
                 onClick={() => setCurrentSlide(i)}
-                className="transition-all duration-300 rounded-full"
+                className={`transition-all duration-300 rounded-full ${i === currentSlide ? "bg-[var(--cat)] lg:bg-white" : "bg-white/35"}`}
                 style={{
                   width: i === currentSlide ? "2rem" : "0.5rem",
                   height: "0.5rem",
-                  backgroundColor: i === currentSlide ? activeCat.color : "rgba(255,255,255,0.35)",
+                  ["--cat" as string]: activeCat.color,
                 }}
                 aria-label={`Slide ${i + 1}`}
               />
