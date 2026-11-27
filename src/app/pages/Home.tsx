@@ -47,6 +47,12 @@ const sliderImages: Record<string, string> = {
   "grabado-corte-laser": sliderGrabado,
 };
 
+// Color de fondo del slider en desktop. Por defecto usa el color de la categoría;
+// aquí se puede sobrescribir solo para el slider.
+const sliderBgColors: Record<string, string> = {
+  "dtf-uv": "#f8c947",
+};
+
 // 6 slider categories (excluding "otros-servicios")
 const sliderCats = categorias.filter((c) => c.slug !== "otros-servicios");
 
@@ -151,7 +157,7 @@ export default function Home() {
               <div
                 key={cat.slug}
                 className="absolute inset-0 transition-opacity duration-[1500ms] lg:bg-[var(--cat)]"
-                style={{ opacity: isActive ? 1 : 0, pointerEvents: isActive ? "auto" : "none", ["--cat" as string]: cat.color }}
+                style={{ opacity: isActive ? 1 : 0, pointerEvents: isActive ? "auto" : "none", ["--cat" as string]: sliderBgColors[cat.slug] ?? cat.color }}
               >
                 {/* Imagen en la mitad derecha, pegada a la mitad del slider: máx. 50% del ancho en desktop (lg),
                     con padding y esquinas redondeadas; el fondo toma el color de la categoría.
