@@ -39,6 +39,7 @@ const CATEGORY_KEYWORDS: Record<string, string[]> = {
   "impresion": [
     "impresión digital", "impresión offset", "imprenta", "tarjetas de presentación",
     "volantes", "flyers", "trípticos", "catálogos", "menús", "etiquetas", "serigrafía",
+    "sublimación", "impresión cama plana", "impresión UV",
   ],
   "gran-formato": [
     "impresión gran formato", "lonas impresas", "banners", "roll ups",
@@ -76,12 +77,13 @@ const SERVICE_KEYWORDS: Record<string, string[]> = {
   "etiquetas": ["etiquetas", "etiquetas adheribles", "impresión de etiquetas"],
   "menus": ["menús para restaurante", "impresión de menús", "cartas de restaurante"],
   "catalogos": ["catálogos", "impresión de catálogos", "revistas"],
-  "cama-plana": ["impresión cama plana", "impresión UV cama plana", "impresión sobre rígidos"],
+  "cama-plana": ["impresión cama plana", "impresión UV cama plana", "impresión sobre rígidos", "impresión sobre semi rígidos"],
+  "sublimacion": ["sublimación", "cintas para gafete", "lanyards personalizados", "sublimación textil"],
   "serigrafia": ["serigrafía", "serigrafía en playeras", "serigrafía textil"],
   "lonas": ["lonas", "lonas impresas", "impresión de lonas", "lonas publicitarias"],
   "banners": ["banners", "banners impresos", "banners para eventos"],
   "roll-ups": ["roll up", "roll ups", "porta banner", "displays roll up"],
-  "vinil-de-corte": ["vinil de corte", "letras de vinil", "rotulación con vinil"],
+  "vinil-de-corte": ["corte de vinil", "vinil de corte", "letras de vinil", "rotulación con vinil"],
   "vinil-impreso": ["vinil impreso", "impresión en vinil", "calcomanías"],
   "vinil-adherible": ["vinil adherible", "stickers", "calcomanías personalizadas"],
   "bolsas-de-tela": ["bolsas de tela", "tote bags personalizadas", "bolsas ecológicas"],

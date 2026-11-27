@@ -347,7 +347,7 @@ const todosLosServicios: Servicio[] = [
     path: "cama-plana",
     tituloServicio: "Cama Plana",
     descripcion:
-      "Realizamos impresiones con un sistema digital directo que utiliza luz ultravioleta (UV), trabajamos con una gran variedad de objetos y placas rígidas o flexibles sin necesidad de usar papel de transferencia.",
+      "Impresión directa sobre rígidos y semi rígidos. Tintas UV. Medida máxima 122x244 cm.",
     esEstrella: true,
     categoriaSlug: "impresion",
     subservicios: [
@@ -356,23 +356,16 @@ const todosLosServicios: Servicio[] = [
     color: "#009681",
     icono: "🃏",
     galeria: [
-      { type: "image", url: camaPlana1 },
-      { type: "image", url: camaPlana2 },
       { type: "image", url: camaPlana3 },
       { type: "image", url: camaPlana4 },
       { type: "image", url: camaPlana5 },
       { type: "image", url: camaPlana6 },
-      { type: "image", url: camaPlana7 },
       { type: "image", url: camaPlana8 },
-      { type: "image", url: camaPlana9 },
       { type: "image", url: camaPlana10 },
       { type: "image", url: camaPlana11 },
-      { type: "image", url: camaPlana12 },
       { type: "image", url: camaPlana13 },
-      { type: "image", url: camaPlana14 },
       { type: "image", url: camaPlana15 },
       { type: "image", url: camaPlana16 },
-      { type: "image", url: camaPlana17 },
       { type: "image", url: camaPlana18 },
       { type: "image", url: camaPlana19 },
       { type: "image", url: camaPlana20 },
@@ -399,29 +392,48 @@ const todosLosServicios: Servicio[] = [
     categoriaSlug: "impresion",
     subservicios: [
     ],
-    imagenHero: serigrafia13,
+    imagenHero: serigrafia3,
     color: "#009681",
     icono: "🃏",
     galeria: [
-      { type: "image", url: serigrafia1 },
-      { type: "image", url: serigrafia2 },
+      // { type: "image", url: serigrafia1 }, // oculta
+      // { type: "image", url: serigrafia2 }, // oculta
       { type: "image", url: serigrafia3 },
-      { type: "image", url: serigrafia4 },
+      // { type: "image", url: serigrafia4 }, // oculta
       { type: "image", url: serigrafia5 },
       { type: "image", url: serigrafia6 },
       { type: "image", url: serigrafia7 },
       { type: "image", url: serigrafia8 },
       { type: "image", url: serigrafia9 },
       { type: "image", url: serigrafia10 },
-      { type: "image", url: serigrafia11 },
-      { type: "image", url: serigrafia12 },
-      { type: "image", url: serigrafia13 },
-      { type: "image", url: serigrafia14 },
+      // { type: "image", url: serigrafia11 }, // oculta
+      // { type: "image", url: serigrafia12 }, // oculta
+      // { type: "image", url: serigrafia13 }, // oculta
+      // { type: "image", url: serigrafia14 }, // oculta
       { type: "image", url: serigrafia15 },
       { type: "image", url: serigrafia16 },
       { type: "image", url: serigrafia17 },
       { type: "image", url: serigrafia18 },
       { type: "image", url: serigrafia19 },
+    ],
+  },
+  {
+    orden: 2,
+    path: "sublimacion",
+    tituloServicio: "Sublimación",
+    descripcion:
+      "Personalizamos cintas para gafete, textiles y artículos promocionales con sublimación: colores vivos, a todo color y duraderos, que no se desprenden ni se cuartean.",
+    esEstrella: false,
+    categoriaSlug: "impresion",
+    subservicios: [
+    ],
+    imagenHero: camaPlana1,
+    color: "#009681",
+    icono: "🎨",
+    galeria: [
+      { type: "image", url: camaPlana1 },
+      { type: "image", url: camaPlana2 },
+      { type: "image", url: camaPlana12 },
     ],
   },
   // ── GRAN FORMATO ───────────────────────────────────────────────────────────
@@ -430,7 +442,7 @@ const todosLosServicios: Servicio[] = [
     path: "lonas",
     tituloServicio: "Lonas",
     descripcion:
-      "Lonas publicitarias de alta resolución para exteriores e interiores. Resistentes al sol, lluvia y viento. El clásico del gran formato.",
+      "Lonas publicitarias de alta resolución para exteriores e interiores. Resistentes al sol, lluvia y viento.",
     esEstrella: true,
     categoriaSlug: "gran-formato",
     subservicios: [
@@ -440,10 +452,15 @@ const todosLosServicios: Servicio[] = [
       "Tamaños hasta 3m de ancho",
       "Apta para exterior e interior",
     ],
-    imagenHero: hero(P.gf),
+    imagenHero: camaPlana7,
     color: "#FA4616",
     icono: "🏁",
-    galeria: gal(P.gf),
+    galeria: [
+      { type: "image", url: camaPlana7 },
+      { type: "image", url: camaPlana9 },
+      { type: "image", url: camaPlana14 },
+      { type: "image", url: camaPlana17 },
+    ],
   },
   {
     orden: 9,
@@ -570,7 +587,7 @@ const todosLosServicios: Servicio[] = [
   {
     orden: 15,
     path: "vinil-de-corte",
-    tituloServicio: "Vinil de Corte",
+    tituloServicio: "Corte de Vinil",
     descripcion:
       "Corte preciso de vinil adhesivo para letras, logotipos y gráficos. Acabado profesional en cualquier superficie plana.",
     esEstrella: false,
@@ -798,11 +815,10 @@ const todosLosServicios: Servicio[] = [
       "Diferentes tamaños disponibles",
       "Opción de serigrafía para tirajes grandes",
     ],
-    imagenHero: bolsasTela1,
+    imagenHero: bolsasTela2,
     color: "#154734",
     icono: "👜",
     galeria: [
-      { type: "image", url: bolsasTela1 },
       { type: "image", url: bolsasTela2 },
       { type: "image", url: bolsasTela3 },
       { type: "image", url: bolsasTela4 },
@@ -1237,6 +1253,7 @@ export const serviciosOcultos = new Set([
   "sudaderas",
   "uniformes",
   "gorras",
+  "impresion-dtf-alta-calidad",
   "vasos",
   "acrilico-uv",
   "vidrio-uv",
