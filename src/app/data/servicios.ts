@@ -24,7 +24,7 @@ import camaPlana19 from "../../imports/cama-plana/cama-plana-19.jpg";
 import camaPlana20 from "../../imports/cama-plana/cama-plana-20.jpg";
 import camaPlanaV1 from "../../imports/cama-plana/cama-plana-1.mp4";
 import camaPlanaV2 from "../../imports/cama-plana/cama-plana-2.mp4";
-import camaPlanaV3 from "../../imports/cama-plana/cama-plana-2.mp4";
+import camaPlanaV3 from "../../imports/cama-plana/cama-plana-3.mp4";
 import camaPlanaV4 from "../../imports/cama-plana/cama-plana-4.mp4";
 import camaPlanaV5 from "../../imports/cama-plana/cama-plana-5.mp4";
 import camaPlanaV6 from "../../imports/cama-plana/cama-plana-6.mp4";
@@ -347,43 +347,97 @@ const todosLosServicios: Servicio[] = [
     galeria: gal([P.imp[2], P.imp[4], P.imp[1], P.imp[0], P.imp[3]]),
   },
   */
+  // Cama plana se dividió en Señalética, Lonas, Acrílicos/rígidos y Photo frame.
   {
     orden: 1,
-    path: "cama-plana",
-    tituloServicio: "Cama Plana",
+    path: "senaletica",
+    tituloServicio: "Señalética",
     descripcion:
-      "Impresión directa sobre rígidos y semi rígidos. Tintas UV. Medida máxima 122x244 cm.",
+      "Señalización para oficinas, sucursales y espacios corporativos: señales de seguridad, baños, áreas y reglamentos, impresas directo sobre rígidos con tintas UV.",
     esEstrella: true,
     categoriaSlug: "impresion",
     subservicios: [
     ],
-    imagenHero: camaPlana15,
+    imagenHero: camaPlana3,
     color: "#009681",
-    icono: "🃏",
+    icono: "🪧",
     galeria: [
       { type: "image", url: camaPlana3 },
       { type: "image", url: camaPlana4 },
-      { type: "image", url: camaPlana5 },
-      { type: "image", url: camaPlana6 },
-      { type: "image", url: camaPlana8 },
-      { type: "image", url: camaPlana10 },
-      { type: "image", url: camaPlana11 },
-      { type: "image", url: camaPlana13 },
-      { type: "image", url: camaPlana15 },
       { type: "image", url: camaPlana16 },
-      { type: "image", url: camaPlana18 },
       { type: "image", url: camaPlana19 },
-      { type: "image", url: camaPlana20 },
-
-      { type: "video", url: camaPlanaV2, thumbnail: thumbnailVideo  },
-      { type: "video", url: camaPlanaV3, thumbnail: thumbnailVideo  },
-      { type: "video", url: camaPlanaV4, thumbnail: thumbnailVideo  },
-      { type: "video", url: camaPlanaV5, thumbnail: thumbnailVideo  },
-
+      { type: "image", url: camaPlana13 },
+      { type: "video", url: camaPlanaV2, thumbnail: thumbnailVideo },
     ],
   },
   {
-    orden: 1,
+    orden: 2,
+    path: "lonas",
+    tituloServicio: "Lonas",
+    descripcion:
+      "Lonas publicitarias de alta resolución para exteriores e interiores, impresas en plotter con tintas ecosolventes. Resistentes al sol, lluvia y viento.",
+    esEstrella: true,
+    categoriaSlug: "impresion",
+    subservicios: [
+      "Resolución hasta 1440 dpi",
+      "Lona de 13 oz y 18 oz",
+      "Con o sin ojillos metálicos",
+      "Tamaños hasta 3m de ancho",
+      "Apta para exterior e interior",
+    ],
+    imagenHero: camaPlana7,
+    color: "#009681",
+    icono: "🏁",
+    galeria: [
+      { type: "image", url: camaPlana7 },
+      { type: "image", url: camaPlana17 },
+      { type: "image", url: camaPlana15 },
+      { type: "image", url: camaPlana8 },
+      { type: "video", url: camaPlanaV3, thumbnail: thumbnailVideo },
+    ],
+  },
+  {
+    orden: 3,
+    path: "acrilicos-coroplast-foamboard",
+    tituloServicio: "Acrílicos, Coroplast, Foamboard, Estireno, PVC espumado",
+    descripcion:
+      "Impresión directa en cama plana con tintas UV sobre acrílico, coroplast, foamboard, estireno y PVC espumado. Medida máxima de impresión 122x244 cm.",
+    esEstrella: false,
+    categoriaSlug: "impresion",
+    subservicios: [
+    ],
+    imagenHero: camaPlana18,
+    color: "#009681",
+    icono: "🧱",
+    galeria: [
+      { type: "image", url: camaPlana18 },
+      { type: "image", url: camaPlana20 },
+      { type: "image", url: camaPlana10 },
+      { type: "image", url: camaPlana11 },
+      { type: "video", url: camaPlanaV4, thumbnail: thumbnailVideo },
+      { type: "video", url: camaPlanaV5, thumbnail: thumbnailVideo },
+    ],
+  },
+  {
+    orden: 4,
+    path: "photo-frame",
+    tituloServicio: "Photo Frame, figuras a contorno",
+    descripcion:
+      "Photo frames y figuras recortadas a contorno para eventos, activaciones de marca y exhibición en punto de venta.",
+    esEstrella: false,
+    categoriaSlug: "impresion",
+    subservicios: [
+    ],
+    imagenHero: camaPlana5,
+    color: "#009681",
+    icono: "🖼️",
+    galeria: [
+      { type: "image", url: camaPlana5 },
+      { type: "image", url: camaPlana6 },
+    ],
+  },
+  {
+    orden: 5,
     path: "merchandising",
     tituloServicio: "Merchandising",
     descripcion:
@@ -418,7 +472,7 @@ const todosLosServicios: Servicio[] = [
     ],
   },
   {
-    orden: 2,
+    orden: 6,
     path: "sublimacion",
     tituloServicio: "Sublimación",
     descripcion:
@@ -437,29 +491,6 @@ const todosLosServicios: Servicio[] = [
     ],
   },
   // ── GRAN FORMATO ───────────────────────────────────────────────────────────
-  {
-    orden: 8,
-    path: "lonas",
-    tituloServicio: "Lonas",
-    descripcion:
-      "Lonas publicitarias de alta resolución para exteriores e interiores. Resistentes al sol, lluvia y viento.",
-    esEstrella: true,
-    categoriaSlug: "gran-formato",
-    subservicios: [
-      "Resolución hasta 1440 dpi",
-      "Lona de 13 oz y 18 oz",
-      "Con o sin ojillos metálicos",
-      "Tamaños hasta 3m de ancho",
-      "Apta para exterior e interior",
-    ],
-    imagenHero: camaPlana7,
-    color: "#FA4616",
-    icono: "🏁",
-    galeria: [
-      { type: "image", url: camaPlana7 },
-      { type: "image", url: camaPlana17 },
-    ],
-  },
   {
     orden: 9,
     path: "banners",

@@ -24,7 +24,7 @@ const BASE_KEYWORDS = [
 // Se usan en el <title>: "<título categoría> | <servicio> | Poster People".
 
 const CATEGORY_SEO_TITLE: Record<string, string> = {
-  "impresion": "Impresión digital y offset",
+  "impresion": "Impresión pequeño y mediano formato",
   "gran-formato": "Impresión de gran formato",
   "vinil-rotulacion": "Vinil y rotulación",
   "dtf-textil": "Impresión DTF textil",
@@ -37,13 +37,12 @@ const CATEGORY_SEO_TITLE: Record<string, string> = {
 
 const CATEGORY_KEYWORDS: Record<string, string[]> = {
   "impresion": [
-    "impresión digital", "impresión offset", "imprenta", "tarjetas de presentación",
-    "volantes", "flyers", "trípticos", "catálogos", "menús", "etiquetas", "merchandising", "serigrafía",
-    "sublimación", "impresión cama plana", "impresión UV",
+    "impresión cama plana", "impresión UV", "señalética", "lonas impresas", "plotter ecosolvente",
+    "impresión en acrílico", "coroplast", "foamboard", "estireno", "PVC espumado",
+    "photo frame", "figuras a contorno", "merchandising", "serigrafía", "sublimación",
   ],
   "gran-formato": [
-    "impresión gran formato", "lonas impresas", "banners", "roll ups",
-    "impresión de lonas", "publicidad exterior", "displays para eventos",
+    "impresión gran formato", "banners", "roll ups", "publicidad exterior", "displays para eventos",
   ],
   "vinil-rotulacion": [
     "vinil", "rotulación", "vinil de corte", "vinil impreso", "vinil adherible",
@@ -77,7 +76,9 @@ const SERVICE_KEYWORDS: Record<string, string[]> = {
   "etiquetas": ["etiquetas", "etiquetas adheribles", "impresión de etiquetas"],
   "menus": ["menús para restaurante", "impresión de menús", "cartas de restaurante"],
   "catalogos": ["catálogos", "impresión de catálogos", "revistas"],
-  "cama-plana": ["impresión cama plana", "impresión UV cama plana", "impresión sobre rígidos", "impresión sobre semi rígidos"],
+  "senaletica": ["señalética", "señalización para oficinas", "señales de seguridad", "letreros impresos"],
+  "acrilicos-coroplast-foamboard": ["impresión en acrílico", "impresión en coroplast", "impresión en foamboard", "impresión en estireno", "impresión en PVC espumado", "impresión UV sobre rígidos"],
+  "photo-frame": ["photo frame", "figuras a contorno", "marcos para fotos de eventos", "displays recortados"],
   "sublimacion": ["sublimación", "cintas para gafete", "lanyards personalizados", "sublimación textil"],
   "merchandising": ["merchandising", "artículos promocionales", "regalos corporativos", "promocionales con logo", "serigrafía"],
   "lonas": ["lonas", "lonas impresas", "impresión de lonas", "lonas publicitarias"],

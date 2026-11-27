@@ -12,9 +12,9 @@ export const categorias: Categoria[] = [
   {
     slug: "impresion",
     titulo: "Impresión",
-    subtitulo: "Materiales impresos de alta calidad",
+    subtitulo: "Pequeño y Mediano Formato.",
     descripcion:
-      "Tarjetas de presentación, volantes, trípticos, flyers y más. Impresión profesional que refleja la identidad de tu marca.",
+      "Contamos con Cama plana, tintas UV, medida máxima de impresión 122x244 cm. Plotter Tintas Ecosolventes.",
     color: "#009681",
     imagenHero:
       "https://images.unsplash.com/photo-1512106374988-c95f566d39ef?w=1400&h=800&fit=crop&auto=format",

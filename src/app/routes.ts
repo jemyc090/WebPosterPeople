@@ -11,6 +11,8 @@ import CategoriaDetalle from "./pages/CategoriaDetalle";
 const ToServicios = () => Navigate({ to: "/servicios", replace: true });
 const ToHome = () => Navigate({ to: "/", replace: true });
 // Serigrafía se renombró a Merchandising: la URL anterior redirige a la nueva
+const ToLonas = () => Navigate({ to: "/categorias/impresion/lonas", replace: true });
+const ToCategoriaImpresion = () => Navigate({ to: "/categorias/impresion", replace: true });
 const ToMerchandising = () => Navigate({ to: "/categorias/impresion/merchandising", replace: true });
 
 export const router = createBrowserRouter([
@@ -25,6 +27,8 @@ export const router = createBrowserRouter([
       { path: "categorias", Component: CategoriasList },
       { path: "categorias/:slug", Component: CategoriaDetalle },
       { path: "categorias/impresion/serigrafia", Component: ToMerchandising },
+      { path: "categorias/gran-formato/lonas", Component: ToLonas },
+      { path: "categorias/impresion/cama-plana", Component: ToCategoriaImpresion },
       { path: "categorias/:slug/:servicePath", Component: CategoriaDetalle },
       // Redirige /servicios/:path al catálogo mientras esté desactivado
       { path: "servicios/:path", Component: ToServicios },
