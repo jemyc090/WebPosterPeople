@@ -5,6 +5,7 @@ import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 // ── Imágenes ─────────────────────────────────────────────────────────────────
 import logoCuadrado from "../../../imports/slider-nuevo/logo-cuadrado.jpg";
 import logoHorizontal from "../../../imports/slider-nuevo/logo-horizontal.jpg";
+import logoSitio from "../../../imports/logo-posterpeople.png";
 
 import pAcciona from "../../../imports/slider-nuevo/proyectos/acciona.jpg";
 import pHeartmanship from "../../../imports/slider-nuevo/proyectos/heartmanship.jpg";
@@ -51,7 +52,7 @@ const C = {
 
 const STATS = [
   { num: "28", label: "Años de experiencia", color: C.rosa },
-  { num: "+20", label: "Clientes", color: C.azul },
+  { num: "+50", label: "Clientes", color: C.azul },
   { num: "+5,000", label: "Proyectos", color: C.amarillo },
 ];
 
@@ -167,14 +168,23 @@ function SlideLogo() {
 
 function SlideTrayectoria() {
   return (
-    <div className={`relative h-full w-full bg-white flex flex-col justify-center gap-10 lg:gap-16 ${pad}`}>
+    <div className="relative h-full w-full bg-white flex flex-col">
+      {/* Franja con el logo */}
+      <div
+        className="shrink-0 h-[18%] min-h-[84px] max-h-[170px] flex items-center px-5 sm:px-8 lg:px-16 xl:px-20 border-b-4"
+        style={{ backgroundColor: "#154734", borderColor: C.naranja }}
+      >
+        <img src={logoSitio} alt="Poster People" className="h-[72%] max-w-full object-contain object-left" />
+      </div>
+
+      <div className="relative flex-1 min-h-0 flex flex-col justify-center gap-8 lg:gap-12 px-5 sm:px-8 lg:px-16 xl:px-20 pt-4 pb-14 lg:pb-16">
       {/* Hexágono azul cortado por el borde derecho */}
       <div
-        className="absolute right-0 top-[7%] w-[22vw] h-[26vw] sm:w-[16vw] sm:h-[19vw] lg:w-[12vw] lg:h-[14vw] max-w-[220px] max-h-[260px]"
+        className="absolute right-0 top-[8%] w-[20vw] h-[24vw] sm:w-[16vw] sm:h-[19vw] lg:w-[12vw] lg:h-[14vw] max-w-[220px] max-h-[260px]"
         style={{ backgroundColor: C.azul, clipPath: "polygon(30% 0, 100% 0, 100% 100%, 30% 100%, 0 50%)" }}
       />
       <h2
-        className="relative font-['Archivo'] font-medium text-[2.4rem] sm:text-5xl lg:text-[4.4rem] xl:text-[5rem] leading-[1.08] max-w-[15ch] pr-16 sm:pr-0"
+        className="relative font-['Archivo'] font-medium text-[2.1rem] sm:text-5xl lg:text-[3.8rem] xl:text-[4.4rem] leading-[1.08] max-w-[15ch] pr-16 sm:pr-0"
         style={{ color: C.texto }}
       >
         Lo diseñamos, lo producimos, lo{" "}
@@ -182,10 +192,10 @@ function SlideTrayectoria() {
           instalamos<span style={{ color: C.texto }}>.</span>
         </span>
       </h2>
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 lg:gap-12 max-w-6xl">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-8 lg:gap-12 max-w-6xl">
         {STATS.map((s) => (
           <div key={s.label} className="border-t-[3px] pt-3 lg:pt-5" style={{ borderColor: s.color }}>
-            <div className="font-['Montserrat'] font-bold text-[2.6rem] sm:text-5xl lg:text-7xl leading-none" style={{ color: C.texto }}>
+            <div className="font-['Montserrat'] font-bold text-[2.2rem] sm:text-5xl lg:text-6xl leading-none" style={{ color: C.texto }}>
               {s.num}
             </div>
             <div className="font-['Montserrat'] font-bold uppercase text-xs lg:text-sm tracking-wide mt-2" style={{ color: C.texto }}>
@@ -193,6 +203,7 @@ function SlideTrayectoria() {
             </div>
           </div>
         ))}
+      </div>
       </div>
     </div>
   );
@@ -372,7 +383,7 @@ function SlideContacto() {
 // ── Slider ───────────────────────────────────────────────────────────────────
 
 const SLIDES: { id: string; tema: "claro" | "oscuro"; render: () => ReactNode }[] = [
-  { id: "logo", tema: "oscuro", render: () => <SlideLogo /> },
+  // { id: "logo", tema: "oscuro", render: () => <SlideLogo /> }, // retirado: el logo ahora va en el slide de trayectoria
   { id: "trayectoria", tema: "claro", render: () => <SlideTrayectoria /> },
   { id: "servicios", tema: "claro", render: () => <SlideServicios /> },
   { id: "proyectos", tema: "claro", render: () => <SlideProyectos /> },
