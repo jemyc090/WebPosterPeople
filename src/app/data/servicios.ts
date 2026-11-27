@@ -457,10 +457,7 @@ const todosLosServicios: Servicio[] = [
     icono: "🏁",
     galeria: [
       { type: "image", url: camaPlana7 },
-      { type: "image", url: camaPlana1 },
-      { type: "image", url: camaPlana2 },
       { type: "image", url: camaPlana9 },
-      { type: "image", url: camaPlana12 },
       { type: "image", url: camaPlana14 },
       { type: "image", url: camaPlana17 },
     ],
