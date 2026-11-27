@@ -33,6 +33,8 @@ import cBbva from "../../../imports/slider-nuevo/clientes/bbva.jpg";
 import cFundacion from "../../../imports/slider-nuevo/clientes/fundacion-aleatica.png";
 import cAirCharter from "../../../imports/slider-nuevo/clientes/air-charter.jpg";
 
+// Tipografías de la presentación: Archivo (títulos) y Montserrat Bold (números, nombres y etiquetas).
+
 // ── Colores de la presentación ───────────────────────────────────────────────
 const C = {
   verdeOscuro: "#002a02",
@@ -122,7 +124,7 @@ function Encabezado({
       style={subrayado === "linea" ? { borderColor: C.texto } : undefined}
     >
       <h2
-        className="font-['Barlow'] font-semibold text-[1.9rem] sm:text-4xl lg:text-5xl leading-none"
+        className="font-['Archivo'] font-semibold text-[1.9rem] sm:text-4xl lg:text-5xl leading-none"
         style={{
           color: C.texto,
           ...(subrayado === "titulo" ? { borderBottom: `3px solid ${color}`, paddingBottom: "0.2em" } : {}),
@@ -132,7 +134,7 @@ function Encabezado({
       </h2>
       {tag && (
         <span
-          className="font-['Barlow'] font-bold text-[0.65rem] sm:text-xs lg:text-sm tracking-wide uppercase text-right"
+          className="font-['Montserrat'] font-bold text-[0.65rem] sm:text-xs lg:text-sm tracking-wide uppercase text-right"
           style={{ color }}
         >
           {tag}
@@ -145,7 +147,7 @@ function Encabezado({
 function Etiqueta({ children, bg, fg }: { children: ReactNode; bg: string; fg: string }) {
   return (
     <span
-      className="absolute left-0 bottom-0 font-['Barlow'] font-bold uppercase text-[0.6rem] sm:text-xs lg:text-sm tracking-wide px-2 py-1 lg:px-3 lg:py-1.5"
+      className="absolute left-0 bottom-0 font-['Montserrat'] font-bold uppercase text-[0.6rem] sm:text-xs lg:text-sm tracking-wide px-2 py-1 lg:px-3 lg:py-1.5"
       style={{ backgroundColor: bg, color: fg }}
     >
       {children}
@@ -172,7 +174,7 @@ function SlideTrayectoria() {
         style={{ backgroundColor: C.azul, clipPath: "polygon(30% 0, 100% 0, 100% 100%, 30% 100%, 0 50%)" }}
       />
       <h2
-        className="relative font-['Barlow'] font-medium text-[2.4rem] sm:text-5xl lg:text-[4.4rem] xl:text-[5rem] leading-[1.08] max-w-[15ch] pr-16 sm:pr-0"
+        className="relative font-['Archivo'] font-medium text-[2.4rem] sm:text-5xl lg:text-[4.4rem] xl:text-[5rem] leading-[1.08] max-w-[15ch] pr-16 sm:pr-0"
         style={{ color: C.texto }}
       >
         Lo diseñamos, lo producimos, lo{" "}
@@ -183,10 +185,10 @@ function SlideTrayectoria() {
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 lg:gap-12 max-w-6xl">
         {STATS.map((s) => (
           <div key={s.label} className="border-t-[3px] pt-3 lg:pt-5" style={{ borderColor: s.color }}>
-            <div className="font-['Barlow'] font-bold text-[2.6rem] sm:text-5xl lg:text-7xl leading-none" style={{ color: C.texto }}>
+            <div className="font-['Montserrat'] font-bold text-[2.6rem] sm:text-5xl lg:text-7xl leading-none" style={{ color: C.texto }}>
               {s.num}
             </div>
-            <div className="font-['Barlow'] font-bold uppercase text-xs lg:text-sm tracking-wide mt-2" style={{ color: C.texto }}>
+            <div className="font-['Montserrat'] font-bold uppercase text-xs lg:text-sm tracking-wide mt-2" style={{ color: C.texto }}>
               {s.label}
             </div>
           </div>
@@ -207,18 +209,18 @@ function SlideServicios() {
               to={s.link}
               className="group flex items-center sm:items-baseline gap-4 lg:gap-8 py-2.5 sm:py-3 lg:py-[1.1vh]"
             >
-              <span className="font-['Barlow'] font-bold text-xs lg:text-sm w-6 shrink-0" style={{ color: C.rosa }}>
+              <span className="font-['Montserrat'] font-bold text-xs lg:text-sm w-6 shrink-0" style={{ color: C.rosa }}>
                 {s.num}
               </span>
               <span className="flex-1 flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-0.5">
                 <span
-                  className="font-['Barlow'] font-semibold text-[1.35rem] sm:text-3xl lg:text-[2.6rem] leading-tight transition-colors group-hover:text-[#FF3EB5]"
+                  className="font-['Montserrat'] font-bold text-[1.35rem] sm:text-3xl lg:text-[2.6rem] leading-tight transition-colors group-hover:text-[#FF3EB5]"
                   style={{ color: C.texto }}
                 >
                   {s.nombre}
                 </span>
                 {s.detalle && (
-                  <span className="font-['Barlow'] font-semibold text-xs lg:text-base" style={{ color: C.texto }}>
+                  <span className="font-['Montserrat'] font-semibold text-xs lg:text-base" style={{ color: C.texto }}>
                     {s.detalle}
                   </span>
                 )}
@@ -292,10 +294,10 @@ function SlideValores() {
               ${i % 2 === 0 ? "border-r" : ""} ${i < 2 ? "border-b" : ""}`}
             style={{ borderColor: C.texto }}
           >
-            <h3 className="font-['Barlow'] font-bold text-[1.45rem] sm:text-4xl lg:text-6xl leading-none" style={{ color: v.color }}>
+            <h3 className="font-['Montserrat'] font-bold text-[1.45rem] sm:text-4xl lg:text-6xl leading-none" style={{ color: v.color }}>
               {v.titulo}
             </h3>
-            <p className="font-['Barlow'] font-semibold text-xs sm:text-sm lg:text-lg" style={{ color: C.texto }}>
+            <p className="font-['Montserrat'] font-semibold text-xs sm:text-sm lg:text-lg" style={{ color: C.texto }}>
               {v.texto}
             </p>
           </div>
@@ -305,7 +307,7 @@ function SlideValores() {
         {PILARES.map((p) => (
           <span
             key={p.label}
-            className="font-['Barlow'] font-bold uppercase text-white text-[0.6rem] sm:text-xs lg:text-sm tracking-wide px-2.5 py-1.5 lg:px-4 lg:py-2"
+            className="font-['Montserrat'] font-bold uppercase text-white text-[0.6rem] sm:text-xs lg:text-sm tracking-wide px-2.5 py-1.5 lg:px-4 lg:py-2"
             style={{ backgroundColor: p.bg }}
           >
             {p.label}
@@ -341,7 +343,7 @@ function SlideContacto() {
     <div className={`h-full w-full flex flex-col justify-between ${pad}`} style={{ backgroundColor: C.verdeOscuro }}>
       <img src={logoHorizontal} alt="Poster People" className="w-full max-w-[640px] lg:max-w-[46%] object-contain object-left" />
       <div>
-        <h2 className="font-['Barlow'] font-bold text-white text-[3rem] sm:text-6xl lg:text-[6.2rem] leading-[0.95] mb-4 lg:mb-6">
+        <h2 className="font-['Archivo'] font-bold text-white text-[3rem] sm:text-6xl lg:text-[6.2rem] leading-[0.95] mb-4 lg:mb-6">
           Cuéntanos tu proyecto.
         </h2>
         <div className="h-[3px] mb-4 lg:mb-6" style={{ backgroundColor: C.azul }} />
@@ -351,14 +353,14 @@ function SlideContacto() {
               <a
                 key={e.email}
                 href={`mailto:${e.email}`}
-                className="font-['Barlow'] font-bold text-lg sm:text-2xl lg:text-3xl hover:underline break-all"
+                className="font-['Montserrat'] font-bold text-lg sm:text-2xl lg:text-3xl hover:underline break-all"
                 style={{ color: e.color }}
               >
                 {e.email}
               </a>
             ))}
           </div>
-          <span className="font-['Barlow'] font-bold text-white text-xs lg:text-base tracking-wide uppercase">
+          <span className="font-['Montserrat'] font-bold text-white text-xs lg:text-base tracking-wide uppercase">
             Ideas | Diseño | Soluciones
           </span>
         </div>
