@@ -3,6 +3,8 @@ export interface Categoria {
   titulo: string;
   subtitulo: string;
   descripcion: string;
+  /** Líneas extra que se muestran bajo el subtítulo en el encabezado de la categoría. */
+  detalleEncabezado?: string[];
   color: string;
   imagenHero: string;
   icono: string;
@@ -15,6 +17,10 @@ export const categorias: Categoria[] = [
     subtitulo: "Pequeño y Mediano Formato.",
     descripcion:
       "Contamos con Cama plana, tintas UV, medida máxima de impresión 122x244 cm. Plotter Tintas Ecosolventes.",
+    detalleEncabezado: [
+      "Contamos con Cama plana, tintas UV, medida máxima de impresión 122x244 cm",
+      "Plotter Tintas Ecosolventes",
+    ],
     color: "#009681",
     imagenHero:
       "https://images.unsplash.com/photo-1512106374988-c95f566d39ef?w=1400&h=800&fit=crop&auto=format",

@@ -416,8 +416,11 @@ export default function CategoriaDetalle() {
               <h1 className="font-['Barlow_Condensed'] font-black text-white text-5xl md:text-7xl uppercase leading-none">
                 {categoria.titulo}
               </h1>
-              <p className="font-['Montserrat'] text-white/70 text-base mt-2 max-w-lg">
+              <p className="font-['Montserrat'] text-white/70 text-base mt-2 max-w-2xl">
                 {categoria.subtitulo}
+                {categoria.detalleEncabezado?.map((linea) => (
+                  <span key={linea} className="block">{linea}</span>
+                ))}
               </p>
             </div>
             <div className="bg-white/15 backdrop-blur-sm border border-white/20 px-4 py-2 rounded-full">
