@@ -8,6 +8,7 @@ import muro3 from "../../imports/muro/muro-3.jpg";
 import sublimacion1 from "../../imports/sublimacion/sublimacion-1.jpg";
 import senaletica1 from "../../imports/senaletica/senaletica-1.jpg";
 import senaletica2 from "../../imports/senaletica/senaletica-2.jpg";
+import lona1 from "../../imports/lonas/lona-1.jpg";
 import camaPlana1 from "../../imports/cama-plana/cama-plana-1.jpg";
 import camaPlana2 from "../../imports/cama-plana/cama-plana-2.jpg";
 import camaPlana3 from "../../imports/cama-plana/cama-plana-3.jpg";
@@ -401,6 +402,7 @@ const todosLosServicios: Servicio[] = [
       { type: "image", url: camaPlana17 },
       { type: "image", url: camaPlana15 },
       { type: "image", url: camaPlana8 },
+      { type: "image", url: lona1 },
       { type: "video", url: camaPlanaV3, thumbnail: thumbnailVideo },
     ],
   },
