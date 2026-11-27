@@ -457,7 +457,6 @@ const todosLosServicios: Servicio[] = [
     icono: "🏁",
     galeria: [
       { type: "image", url: camaPlana7 },
-      { type: "image", url: camaPlana14 },
       { type: "image", url: camaPlana17 },
     ],
   },
@@ -1149,6 +1148,7 @@ const todosLosServicios: Servicio[] = [
     galeria: [
       { type: "image", url: catering1 },
       { type: "image", url: catering2 },
+      { type: "image", url: boxLunch1 },
       { type: "video", url: cateringVid1, thumbnail: thumbnailVideo },
       { type: "video", url: cateringVid2, thumbnail: thumbnailVideo },
       { type: "video", url: cateringVid3, thumbnail: thumbnailVideo },
@@ -1260,6 +1260,8 @@ export const serviciosOcultos = new Set([
   "gorras",
   "impresion-dtf-alta-calidad",
   "etiquetas-premium",
+  "box-lunch",
+  "diseno-grafico",
   "vasos",
   "acrilico-uv",
   "vidrio-uv",
