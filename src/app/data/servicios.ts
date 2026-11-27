@@ -5,6 +5,7 @@ import thumbnailVideo from "../../imports/thumbnail-video.png";
 import muro1 from "../../imports/muro/muro-1.jpg";
 import muro2 from "../../imports/muro/muro-2.jpg";
 import muro3 from "../../imports/muro/muro-3.jpg";
+import sublimacion1 from "../../imports/sublimacion/sublimacion-1.jpg";
 import camaPlana1 from "../../imports/cama-plana/cama-plana-1.jpg";
 import camaPlana2 from "../../imports/cama-plana/cama-plana-2.jpg";
 import camaPlana3 from "../../imports/cama-plana/cama-plana-3.jpg";
@@ -486,6 +487,7 @@ const todosLosServicios: Servicio[] = [
       { type: "image", url: camaPlana1 },
       { type: "image", url: camaPlana2 },
       { type: "image", url: camaPlana12 },
+      { type: "image", url: sublimacion1 },
     ],
   },
   // ── MATERIAL POP Y DISPLAY ───────────────────────────────────────────────────────────
