@@ -194,11 +194,13 @@ export default function ServicioDetalle() {
 
       {/* Hero */}
       <section className="relative h-[55vh] min-h-[360px] overflow-hidden">
-        <img
-          src={servicio.imagenHero}
-          alt={servicio.tituloServicio}
-          className="absolute inset-0 w-full h-full object-cover"
-        />
+        {servicio.imagenHero && (
+          <img
+            src={servicio.imagenHero}
+            alt={servicio.tituloServicio}
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+        )}
         <div className="absolute inset-0" style={{ backgroundColor: servicio.color + "E0" }} />
 
         {/* Decorative */}

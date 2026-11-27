@@ -406,16 +406,11 @@ const todosLosServicios: Servicio[] = [
     categoriaSlug: "impresion",
     subservicios: [
     ],
-    imagenHero: camaPlana18,
+    imagenHero: "", // sin foto por ahora
     color: "#009681",
     icono: "🧱",
     galeria: [
-      { type: "image", url: camaPlana18 },
-      { type: "image", url: camaPlana20 },
-      { type: "image", url: camaPlana10 },
-      { type: "image", url: camaPlana11 },
-      { type: "video", url: camaPlanaV4, thumbnail: thumbnailVideo },
-      { type: "video", url: camaPlanaV5, thumbnail: thumbnailVideo },
+      // Galería vacía por ahora (pendiente de fotos de acrílicos, coroplast, etc.)
     ],
   },
   {

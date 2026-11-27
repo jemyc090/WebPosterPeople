@@ -591,7 +591,7 @@ export default function CategoriaDetalle() {
                   )}
 
                   {/* Fullscreen button (images only) */}
-                  {mainImage?.type !== "video" && (
+                  {mainImage && mainImage.type !== "video" && (
                     <button
                       onClick={() => setLightboxOpen(true)}
                       className="absolute top-3 right-3 z-10 w-8 h-8 bg-black/40 hover:bg-black/60 rounded-full flex items-center justify-center transition-colors opacity-0 group-hover:opacity-100"
@@ -617,9 +617,11 @@ export default function CategoriaDetalle() {
                       </button>
                     </>
                   )}
-                  <div className="absolute bottom-3 left-3 bg-black/40 text-white font-['Montserrat'] text-xs px-2.5 py-1 rounded-full z-10">
-                    {activeImageIndex + 1} / {galeria.length}
-                  </div>
+                  {galeria.length > 0 && (
+                    <div className="absolute bottom-3 left-3 bg-black/40 text-white font-['Montserrat'] text-xs px-2.5 py-1 rounded-full z-10">
+                      {activeImageIndex + 1} / {galeria.length}
+                    </div>
+                  )}
                 </div>
 
                 {/* Thumbnail strip */}

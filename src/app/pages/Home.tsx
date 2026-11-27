@@ -347,7 +347,7 @@ export default function Home() {
                 className="group relative overflow-hidden bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300"
               >
                 <div className="relative h-52 overflow-hidden rounded-t-2xl">
-                  <img src={svc.imagenHero} alt={svc.tituloServicio} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                  {svc.imagenHero && <img src={svc.imagenHero} alt={svc.tituloServicio} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />}
                   <div className="absolute inset-0 opacity-70 group-hover:opacity-60 transition-opacity" style={{ backgroundColor: svc.color }} />
                   <span className="absolute top-4 left-4 font-['Barlow_Condensed'] font-black text-white text-4xl opacity-20">{String(svc.orden).padStart(2, "0")}</span>
                 </div>

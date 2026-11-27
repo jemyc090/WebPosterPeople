@@ -268,11 +268,15 @@ export default function Servicios() {
                   className="group flex flex-col bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 h-full"
                 >
                   <div className="relative h-48 overflow-hidden">
-                    <img
-                      src={svc.imagenHero}
-                      alt={svc.tituloServicio}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
+                    {svc.imagenHero ? (
+                      <img
+                        src={svc.imagenHero}
+                        alt={svc.tituloServicio}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                    ) : (
+                      <div className="w-full h-full" style={{ backgroundColor: svc.color }} />
+                    )}
                     <div
                       className="absolute inset-0 opacity-0 group-hover:opacity-40 transition-opacity duration-300"
                       style={{ backgroundColor: svc.color }}
